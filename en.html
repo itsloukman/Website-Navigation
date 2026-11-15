@@ -346,6 +346,12 @@
                     AI Search
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="showCategory('craft_apps')">
+                    <i class="bi bi-puzzle"></i>
+                    Craft Apps
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -686,6 +692,33 @@
                 </div>
                 <div class="site-grid" id="ai-search-grid">
                     <!-- AI search site cards will be dynamically added via JavaScript -->
+                </div>
+            </div>
+
+            <!-- Craft open-source creative apps -->
+            <div id="craft-apps-section" class="category-section">
+                <div class="category-title">
+                    <h2><i class="bi bi-puzzle"></i> Craft Open-Source Creative Apps</h2>
+                </div>
+                <div class="craft-intro">
+                    20 free, open-source creative apps · 8 categories · 73 official download links for macOS / Windows / Linux / FreeBSD.
+                    Compiled from the <a href="https://www.scys.ai/insights/craft-apps-chinese-directory/" target="_blank" rel="noopener noreferrer">Craft Apps Chinese Directory ↗</a>.
+                    Names stay in English, downloads point to each project's GitHub Releases, and documentation is still English-only.
+                </div>
+                <!-- Subcategory navigation -->
+                <div class="subcategory-nav">
+                    <button class="subcategory-btn active" onclick="filterCraftAppsSubcategory('all')">All</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_ai')">AI &amp; Generative</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_design')">Graphics &amp; Design</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_video')">Video &amp; VFX</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_audio')">Audio</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_cad')">CAD &amp; Drafting</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_office')">Office</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_dev')">Developer Tools</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_third')">Community Apps</button>
+                </div>
+                <div class="site-grid" id="craft-apps-grid">
+                    <!-- Craft app cards will be dynamically added via JavaScript -->
                 </div>
             </div>
         </div>

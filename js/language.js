@@ -106,6 +106,17 @@ const languageData = {
         'menu_life_search': 'AI生活与娱乐搜索',
         'menu_product_search': 'AI产品与公司搜索',
 
+        // Craft 开源创作软件专区
+        'menu_craft_apps': 'Craft 开源软件',
+        'menu_craft_ai': 'AI 与生成式媒体',
+        'menu_craft_design': '图形与设计',
+        'menu_craft_video': '视频与特效',
+        'menu_craft_audio': '音频',
+        'menu_craft_cad': 'CAD 与制图',
+        'menu_craft_office': '办公',
+        'menu_craft_dev': '开发者工具',
+        'menu_craft_third': '第三方社区',
+
         // 搜索相关
         'search_title': 'AI365导航',
         'search_subtitle': '你的AI电商军师，全年无休',
@@ -137,6 +148,7 @@ const languageData = {
         'ai_coding_title': 'AI编程',
         'ai_prompts_title': 'AI提示词',
         'ai_search_title': 'AI搜索',
+        'craft_apps_title': 'Craft 开源创作软件',
 
         // 其他
         'all': '全部'
@@ -235,6 +247,15 @@ const languageData = {
         'menu_chinese_resources': 'Chinese AI Prompt Resources',
         'menu_other_tools': 'AI Prompt Utilities',
         'menu_ai_search': 'AI Search',
+        'menu_craft_apps': 'Craft Apps',
+        'menu_craft_ai': 'AI & Generative',
+        'menu_craft_design': 'Graphics & Design',
+        'menu_craft_video': 'Video & VFX',
+        'menu_craft_audio': 'Audio',
+        'menu_craft_cad': 'CAD & Drafting',
+        'menu_craft_office': 'Office',
+        'menu_craft_dev': 'Developer Tools',
+        'menu_craft_third': 'Community Apps',
         'menu_general_search': 'AI Search Engines',
         'menu_academic_search': 'AI Academic Search',
         'menu_programming_search': 'AI Code Search',
@@ -273,6 +294,7 @@ const languageData = {
         'ai_coding_title': 'AI Coding',
         'ai_prompts_title': 'AI Prompts',
         'ai_search_title': 'AI Search',
+        'craft_apps_title': 'Craft Open-Source Creative Apps',
 
         // Others
         'all': 'All'
@@ -499,6 +521,14 @@ function updateNavMenuTexts() {
         updateMenuItemByIcon('bi-code-slash', 'menu_ai_coding');
         updateMenuItemByIcon('bi-lightbulb', 'menu_ai_prompts');
         updateMenuItemByIcon('bi-search', 'menu_ai_search');
+
+        // Craft 开源软件：中文页用 FontAwesome、英文页用 Bootstrap Icons，按 onclick 定位以保留原图标
+        const craftLink = document.querySelector('.nav-link[onclick*="showCategory(\'craft_apps\')"]');
+        if (craftLink) {
+            const craftIcon = craftLink.querySelector('i')?.outerHTML || '';
+            const craftBadge = craftLink.querySelector('.nav-hot-badge')?.outerHTML || '';
+            craftLink.innerHTML = `${craftIcon} ${getText('menu_craft_apps')}${craftBadge ? ' ' + craftBadge : ''}`;
+        }
         
         // 子菜单项
         // 电商平台子菜单
@@ -676,7 +706,8 @@ function updateCategoryTitles() {
             'ai-design': 'ai_design_title',
             'ai-coding': 'ai_coding_title',
             'ai-prompts': 'ai_prompts_title',
-            'ai-search': 'ai_search_title'
+            'ai-search': 'ai_search_title',
+            'craft-apps': 'craft_apps_title'
         };
         
         // 更新所有分类标题
@@ -737,7 +768,17 @@ function updateSubcategoryButtons() {
             'filterSubcategory(\'browser\')': 'menu_browser',
             'filterSubcategory(\'backlink\')': 'menu_backlink',
             'filterSubcategory(\'content\')': 'menu_content',
-            'filterSubcategory(\'learning\')': 'menu_learning'
+            'filterSubcategory(\'learning\')': 'menu_learning',
+
+            // Craft 开源创作软件子分类
+            'filterCraftAppsSubcategory(\'craft_ai\')': 'menu_craft_ai',
+            'filterCraftAppsSubcategory(\'craft_design\')': 'menu_craft_design',
+            'filterCraftAppsSubcategory(\'craft_video\')': 'menu_craft_video',
+            'filterCraftAppsSubcategory(\'craft_audio\')': 'menu_craft_audio',
+            'filterCraftAppsSubcategory(\'craft_cad\')': 'menu_craft_cad',
+            'filterCraftAppsSubcategory(\'craft_office\')': 'menu_craft_office',
+            'filterCraftAppsSubcategory(\'craft_dev\')': 'menu_craft_dev',
+            'filterCraftAppsSubcategory(\'craft_third\')': 'menu_craft_third'
             
             // 其他子分类按钮可以按需添加
         };
@@ -1030,9 +1071,13 @@ function updateSiteCards() {
             });
         }
         
-        // 更新"访问"按钮
+        // 更新"访问"按钮（专题卡片可保留自定义文案，例如 Craft 软件的「查看发布页 / View Releases」）
         document.querySelectorAll('.visit-btn').forEach(btn => {
-            btn.innerHTML = `${getText('visit_button')} <i class="bi bi-box-arrow-up-right"></i>`;
+            const customLabel = currentLanguage === 'en'
+                ? btn.dataset.visitLabelEn
+                : btn.dataset.visitLabel;
+            const label = customLabel || getText('visit_button');
+            btn.innerHTML = `${label} <i class="bi bi-box-arrow-up-right"></i>`;
         });
         
         // 更新"魔法"标签

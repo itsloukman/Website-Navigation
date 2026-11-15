@@ -364,6 +364,13 @@
                     AI 搜索
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="showCategory('craft_apps')">
+                    <i class="fa-solid fa-puzzle-piece sidebar-fa-icon" style="color:#17947F;"></i>
+                    Craft 开源软件
+                    <span class="nav-hot-badge">New</span>
+                </a>
+            </li>
 
         </ul>
     </div>
@@ -742,6 +749,33 @@
                 </div>
                 <div id="ai-search-grid" class="site-grid">
                     <!-- 网站卡片将通过JavaScript动态添加 -->
+                </div>
+            </div>
+
+            <!-- Craft 开源创作软件 -->
+            <div id="craft-apps-section" class="category-section">
+                <div class="category-title">
+                    <h2><i class="bi bi-puzzle"></i> Craft 开源创作软件</h2>
+                </div>
+                <div class="craft-intro">
+                    20 款免费开源创作工具 · 8 个用途分类 · 73 个官方下载入口，覆盖 macOS / Windows / Linux / FreeBSD。内容整理自
+                    <a href="https://www.scys.ai/insights/craft-apps-chinese-directory/" target="_blank" rel="noopener noreferrer">Craft 软件中文导航 ↗</a>，
+                    软件保留英文原名，下载直链指向各项目 GitHub Releases，文档目前仍为英文原站。
+                </div>
+                <!-- 二级分类导航 -->
+                <div class="subcategory-nav">
+                    <button class="subcategory-btn active" onclick="filterCraftAppsSubcategory('all')">全部</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_ai')">AI 与生成式媒体</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_design')">图形与设计</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_video')">视频与特效</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_audio')">音频</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_cad')">CAD 与制图</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_office')">办公</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_dev')">开发者工具</button>
+                    <button class="subcategory-btn" onclick="filterCraftAppsSubcategory('craft_third')">第三方社区</button>
+                </div>
+                <div class="site-grid" id="craft-apps-grid">
+                    <!-- Craft 软件卡片将通过JavaScript动态添加 -->
                 </div>
             </div>
         </div>

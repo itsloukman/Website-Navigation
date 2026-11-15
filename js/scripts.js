@@ -4,12 +4,14 @@ function createSiteCard(site) {
     const isEnglish = getCurrentLanguage() === 'en';
     
     // 检查网站是否需要VPN访问
-    const needsMagic = site.needsMagic || site.tags.includes('魔法');
+    // 兼容个别历史数据缺少 tags 字段的情况，避免一条脏数据中断整页渲染
+    const siteTags = Array.isArray(site.tags) ? site.tags : [];
+    const needsMagic = site.needsMagic || siteTags.includes('魔法');
     // 如果是英文模式，则不显示魔法标签
     const magicTag = !isEnglish && needsMagic ? `<div class="magic-tag">${getText('magic_tag')}</div>` : '';
     
     // 检查网站是否为推荐网站
-    const isRecommended = site.isRecommended || site.isPopular || site.tags.includes('推荐');
+    const isRecommended = site.isRecommended || site.isPopular || siteTags.includes('推荐');
     const recommendTag = isRecommended ? `<div class="recommend-tag"><i class="bi bi-star-fill"></i> ${getText('recommend_tag')}</div>` : '';
     
     // 准备英文描述属性
@@ -19,23 +21,41 @@ function createSiteCard(site) {
     const titleEnAttr = site.titleEn ? `data-title-en="${site.titleEn.replace(/"/g, '&quot;')}"` : '';
     
     // 根据当前语言选择显示的标签
-    let displayTags = site.tags;
+    let displayTags = siteTags;
     if (isEnglish && site.tagsEn && site.tagsEn.length > 0) {
         displayTags = site.tagsEn;
     } else if (isEnglish) {
         // 英文模式但没有英文标签时，尝试翻译常见标签
-        displayTags = site.tags.map(tag => translateTag(tag));
+        displayTags = siteTags.map(tag => translateTag(tag));
     }
     
     const displayTitle = isEnglish && site.titleEn ? site.titleEn : site.title;
     const displayDescription = isEnglish && site.descriptionEn ? site.descriptionEn : site.description;
 
-    // 获取访问按钮文本
-    const visitButtonText = getText('visit_button');
+    // 获取访问按钮文本（专题卡片可自定义，例如 Craft 软件的「查看发布页」）
+    const visitButtonText = isEnglish
+        ? (site.visitLabelEn || getText('visit_button'))
+        : (site.visitLabel || getText('visit_button'));
     const visitLinkTitle = escapeHtmlAttribute(`${visitButtonText} - ${displayTitle}`);
+
+    // Craft 开源软件专区：平台安装包直链 + 使用文档 + 安装说明
+    const hasDownloads = Array.isArray(site.downloads) && site.downloads.length > 0;
+    const craftDownloadsHtml = hasDownloads ? `
+                <div class="craft-downloads">
+                    <div class="craft-download-label">${isEnglish ? 'Official downloads' : '官方下载'} · ${escapeHtml(site.version || '')}</div>
+                    <div class="craft-download-links">
+                        ${site.downloads.map(d => {
+                            const label = isEnglish ? (d.labelEn || d.label) : d.label;
+                            const arrow = d.labelEn === 'Releases' ? '↗' : '↓';
+                            return `<a href="${escapeHtmlAttribute(d.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtmlAttribute(d.url)}">${escapeHtml(label)} ${arrow}</a>`;
+                        }).join('')}
+                        ${site.docs ? `<a class="craft-doc-link" href="${escapeHtmlAttribute(site.docs)}" target="_blank" rel="noopener noreferrer">${isEnglish ? 'Docs' : '使用文档'} ↗</a>` : ''}
+                        ${site.install ? `<a class="craft-doc-link" href="${escapeHtmlAttribute(site.install)}" target="_blank" rel="noopener noreferrer">${isEnglish ? 'Install' : '安装说明'} ↗</a>` : ''}
+                    </div>
+                </div>` : '';
     
     return `
-        <div class="site-card" data-subcategory="${site.subcategory || ''}" ${descriptionEnAttr} ${titleEnAttr} style="position: relative;"
+        <div class="site-card${hasDownloads ? ' craft-card' : ''}" data-subcategory="${site.subcategory || ''}" ${descriptionEnAttr} ${titleEnAttr} style="position: relative;"
              itemscope itemtype="https://schema.org/WebSite">
             ${magicTag}
             ${recommendTag}
@@ -47,9 +67,11 @@ function createSiteCard(site) {
                 <div class="site-tags">
                     ${displayTags.slice(0, 3).map(tag => `<span class="site-tag">${tag}</span>`).join('')}
                 </div>
+                ${craftDownloadsHtml}
             </div>
             <div class="card-footer">
                 <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="visit-btn"
+                   ${hasDownloads ? `data-visit-label="${escapeHtmlAttribute(site.visitLabel || '')}" data-visit-label-en="${escapeHtmlAttribute(site.visitLabelEn || '')}"` : ''}
                    title="${visitLinkTitle}" aria-label="${visitLinkTitle}" itemprop="url">
                     ${visitButtonText} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                 </a>
@@ -353,6 +375,7 @@ function handleCategoryVisibility() {
     initializeCardVisibility('ai-coding-grid');
     initializeCardVisibility('ai-prompts-grid');
     initializeCardVisibility('ai-search-grid');
+    initializeCardVisibility('craft-apps-grid');
 }
 
 // 加载网站数据
@@ -535,8 +558,43 @@ function loadSites() {
         initializeCardVisibility('ai-search-grid');
     }
     
+    // 加载 Craft 开源创作软件专区
+    const craftAppsGrid = document.getElementById('craft-apps-grid');
+    if (craftAppsGrid && Array.isArray(sitesData.craft_apps)) {
+        craftAppsGrid.innerHTML = '';
+        sitesData.craft_apps.forEach(site => {
+            craftAppsGrid.innerHTML += createSiteCard(site);
+        });
+        initializeCardVisibility('craft-apps-grid');
+        filterCraftAppsSubcategory('all', false);
+    }
+
     // 处理卡片可见性
     handleCategoryVisibility();
+}
+
+// Craft 开源创作软件专区的子分类筛选
+// 首页初始加载传 false 保持「8 + 显示更多」；用户点击子分类或从侧边栏进入时默认展开全部 20 款
+function filterCraftAppsSubcategory(subcategory, expandAll = true) {
+    const section = document.getElementById('craft-apps-section');
+    if (!section) return;
+
+    section.querySelectorAll('.subcategory-btn').forEach(btn => {
+        const onclick = btn.getAttribute('onclick') || '';
+        btn.classList.toggle('active', onclick.includes(`'${subcategory}'`));
+    });
+
+    const cards = document.querySelectorAll('#craft-apps-grid .site-card');
+    cards.forEach(card => {
+        const matched = subcategory === 'all' || card.dataset.subcategory === subcategory;
+        card.style.display = matched ? 'flex' : 'none';
+        if (expandAll) card.classList.remove('hidden');
+    });
+
+    if (expandAll) {
+        const moreButton = section.querySelector('.more-sites-btn-container');
+        if (moreButton) moreButton.remove();
+    }
 }
 
 function filterResourcesSubcategory(subcategory) {
@@ -1644,6 +1702,16 @@ function showCategory(category) {
         console.log('显示AI搜索子分类:', category);
         document.getElementById('ai-search-section').style.display = 'block';
         filterAiSearchSubcategory(category);
+    } else if (category === 'craft_apps') {
+        // Craft 开源创作软件主分类（目录型专区，进入时展开全部 20 款）
+        console.log('显示Craft开源创作软件专区');
+        document.getElementById('craft-apps-section').style.display = 'block';
+        filterCraftAppsSubcategory('all', true);
+    } else if (category.startsWith('craft_')) {
+        // Craft 开源创作软件子分类
+        console.log('显示Craft开源创作软件子分类:', category);
+        document.getElementById('craft-apps-section').style.display = 'block';
+        filterCraftAppsSubcategory(category, true);
     } else {
         console.log('未匹配到任何已知分类:', category);
     }
@@ -2237,7 +2305,8 @@ function performSiteSearch(query) {
     // 搜索所有分类
     const categories = [
         'resources', 'tech_blog', 'ecommerce', 'social', 'website', 'ai_chat', 'ai_writing', 'ai_image',
-        'ecommerce_zone', 'ai_video', 'ai_audio', 'ai_design', 'ai_coding', 'ai_prompts', 'ai_search'
+        'ecommerce_zone', 'ai_video', 'ai_audio', 'ai_design', 'ai_coding', 'ai_prompts', 'ai_search',
+        'craft_apps'
     ];
     
     // 对每个分类进行搜索
@@ -2345,23 +2414,25 @@ function getCategoryDisplayName(categoryKey) {
 // 在搜索结果页面创建带分类的网站卡片
 function createSiteCardWithCategory(site, categoryName) {
     // 检查网站是否需要VPN访问
-    const needsMagic = site.needsMagic || site.tags.includes('魔法');
+    // 兼容个别历史数据缺少 tags 字段的情况，避免一条脏数据中断整页渲染
+    const siteTags = Array.isArray(site.tags) ? site.tags : [];
+    const needsMagic = site.needsMagic || siteTags.includes('魔法');
     const magicTag = needsMagic ? `<div class="magic-tag">${getText('magic_tag')}</div>` : '';
     
     // 检查网站是否为推荐网站
-    const isRecommended = site.isRecommended || site.isPopular || site.tags.includes('推荐');
+    const isRecommended = site.isRecommended || site.isPopular || siteTags.includes('推荐');
     const recommendTag = isRecommended ? `<div class="recommend-tag"><i class="bi bi-star-fill"></i> ${getText('recommend_tag')}</div>` : '';
     
     // 确定当前语言
     const isEnglish = getCurrentLanguage() === 'en';
     
     // 根据当前语言选择显示的标签
-    let displayTags = site.tags;
+    let displayTags = siteTags;
     if (isEnglish && site.tagsEn && site.tagsEn.length > 0) {
         displayTags = site.tagsEn;
     } else if (isEnglish) {
         // 英文模式但没有英文标签时，尝试翻译常见标签
-        displayTags = site.tags.map(tag => translateTag(tag));
+        displayTags = siteTags.map(tag => translateTag(tag));
     }
     
     const displayTitle = isEnglish && site.titleEn ? site.titleEn : site.title;
@@ -2407,13 +2478,23 @@ const SEO_CATEGORY_GROUPS = {
     ai_design: ['commerce_design', 'ui_ux', 'illustration', 'model_design', 'assistant_tools', 'special_tools'],
     ai_coding: ['code_generation', 'fullstack_dev', 'automation_workflow', 'design_to_code', 'code_review', 'natural_language_dev', 'low_code', 'cloud_ide'],
     ai_prompts: ['prompt_platforms', 'sd_tools', 'chatgpt_prompts', 'visual_tools', 'chinese_resources', 'other_tools'],
-    ai_search: ['general_search', 'academic_search', 'programming_search', 'finance_search', 'life_search', 'product_search']
+    ai_search: ['general_search', 'academic_search', 'programming_search', 'finance_search', 'life_search', 'product_search'],
+    craft_apps: ['craft_ai', 'craft_design', 'craft_video', 'craft_audio', 'craft_cad', 'craft_office', 'craft_dev', 'craft_third']
 };
 
 function getSeoLabel(key, isEnglish) {
     const map = {
         home: isEnglish ? 'Home' : '首页',
         search: isEnglish ? 'Search Results' : '搜索结果',
+        craft_apps: isEnglish ? 'Craft Open-Source Creative Apps' : 'Craft 开源创作软件',
+        craft_ai: isEnglish ? 'AI & Generative Media' : 'AI 与生成式媒体',
+        craft_design: isEnglish ? 'Graphics & Design' : '图形与设计',
+        craft_video: isEnglish ? 'Video & VFX' : '视频与特效',
+        craft_audio: isEnglish ? 'Audio' : '音频',
+        craft_cad: isEnglish ? 'CAD & Drafting' : 'CAD 与制图',
+        craft_office: isEnglish ? 'Office' : '办公',
+        craft_dev: isEnglish ? 'Developer Tools' : '开发者工具',
+        craft_third: isEnglish ? 'Community Apps' : '第三方与社区应用',
         resources: isEnglish ? 'Resource Guides' : '资源导引',
         'tech-blog': isEnglish ? 'Technical Playbooks' : '技术实战',
         tech_blog: isEnglish ? 'Technical Playbooks' : '技术实战',
@@ -2542,7 +2623,8 @@ function resolveCategoryNavigationTarget(category) {
         ai_design: 'ai-design-section',
         ai_coding: 'ai-coding-section',
         ai_prompts: 'ai-prompts-section',
-        ai_search: 'ai-search-section'
+        ai_search: 'ai-search-section',
+        craft_apps: 'craft-apps-section'
     };
 
     const scrollId = scrollTargetMap[topLevel];
@@ -2634,7 +2716,7 @@ function updateStructuredData(category = 'home') {
         'resources', 'tech_blog',
         'ecommerce', 'social', 'website', 'ai_chat', 'ai_writing',
         'ai_image', 'ecommerce_zone', 'ai_video', 'ai_audio', 'ai_design', 'ai_coding',
-        'ai_prompts', 'ai_search'
+        'ai_prompts', 'ai_search', 'craft_apps'
     ];
 
     const categorySites = context.topLevel
@@ -2882,7 +2964,8 @@ function organizeFooterCategories() {
                 items: [
                     { id: 'website', icon: 'bi-globe', text: 'Site Builders', description: 'Landing pages / Storefronts / CMS', title: 'Website builder navigation, landing page, store and CMS resources', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI Coding', description: 'Code generation / IDE / Debugging', title: 'AI coding navigation, code generation, IDE and debugging tools', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
-                    { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'Prompting', description: 'Prompt libraries / Templates / Workflows', title: 'Prompt engineering navigation, prompt libraries and workflow templates', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' }
+                    { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'Prompting', description: 'Prompt libraries / Templates / Workflows', title: 'Prompt engineering navigation, prompt libraries and workflow templates', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
+                    { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft Apps', description: '20 free & open-source creative apps', title: 'Craft open-source creative apps directory, 20 free tools with official downloads', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
             }
         ]
@@ -2918,7 +3001,8 @@ function organizeFooterCategories() {
                 items: [
                     { id: 'website', icon: 'bi-globe', text: '建站工具', description: '落地页 / 商店 / CMS', title: '建站工具导航，落地页、商店与 CMS 资源', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI编程', description: '代码生成 / IDE / 调试', title: 'AI编程导航，代码生成、IDE 与调试工具', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
-                    { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'AI提示词', description: '提示词库 / 模板 / 工作流', title: 'AI提示词导航，提示词库、模板与工作流资源', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' }
+                    { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'AI提示词', description: '提示词库 / 模板 / 工作流', title: 'AI提示词导航，提示词库、模板与工作流资源', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
+                    { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft 开源软件', description: '20 款免费开源创作工具', title: 'Craft 开源创作软件目录，20 款免费工具与官方下载地址', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
             }
         ];
