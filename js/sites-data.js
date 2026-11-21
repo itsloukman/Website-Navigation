@@ -1637,22 +1637,6 @@ const sitesData = {
             subcategory: 'role_play',
             needsMagic: false
         },
-        {
-            title: 'CueMe',
-            description: '提供个性化虚拟伴侣和角色扮演的AI平台',
-            tags: ['虚拟伴侣', '角色扮演', '情感互动'],
-            url: 'https://www.cueme.com/',
-            subcategory: 'role_play',
-            needsMagic: true
-        },
-        {
-            title: 'Chai',
-            description: '提供AI角色对话的社交平台，支持多种角色和互动场景',
-            tags: ['角色对话', 'AI社交', '互动场景'],
-            url: 'https://chai.ml/',
-            subcategory: 'role_play',
-            needsMagic: true
-        },
         
         // 多模态AI助手
         {
@@ -2111,15 +2095,6 @@ const sitesData = {
     ecommerce_zone: [
         // AI选品
         {
-            title: '1688 遨虾 AlphaShop',
-            description: '面向跨境卖家的 AI 选品与找厂工具，支持以图搜款、工厂匹配、蓝海市场分析与自动询盘，强调从选品到供应链的闭环。',
-            tags: ['以图搜款', '找源头工厂', '自动询盘'],
-            url: 'https://www.1688.com/',
-            subcategory: 'ai_selection',
-            needsMagic: false,
-            isRecommended: true
-        },
-        {
             title: '卖家精灵 SellerSprite',
             description: '亚马逊和 TikTok 卖家的老牌数据工具，支持 AI 选品决策、竞品评论痛点挖掘以及 Listing 生成与诊断。',
             tags: ['对话式选品', '评论挖掘', 'Listing诊断'],
@@ -2151,14 +2126,6 @@ const sitesData = {
             description: '围绕 Temu 平台规则的选品工具，结合实时销量、社媒热度和利润测算，帮助新手快速筛出高潜商品。',
             tags: ['Temu选品', '利润测算', '平台规则'],
             url: 'https://seller.temu.com/',
-            subcategory: 'ai_selection',
-            needsMagic: false
-        },
-        {
-            title: 'OpenClaw + 飞书',
-            description: '适合懂技术的卖家自建私有 AI 选品系统，可自动抓取竞品销量、价格和评论，再结合大模型做打分并回写飞书表格。',
-            tags: ['DIY选品系统', '竞品抓取', '飞书自动化'],
-            url: 'https://www.openclaw.cn/',
             subcategory: 'ai_selection',
             needsMagic: false
         },
