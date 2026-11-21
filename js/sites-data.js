@@ -813,7 +813,7 @@ const sitesData = {
             title: 'ChatGPT',
             description: 'OpenAI开发的大型语言模型，能够进行自然对话和信息检索',
             tags: ['对话AI', '自然语言处理', '信息检索'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'content',
             isRecommended: true,
             needsMagic: true
@@ -1378,7 +1378,7 @@ const sitesData = {
             title: 'ERPNext',
             description: '开源ERP，适合技术团队二次开发，支持跨境电商模块',
             tags: ['开源', '二次开发', '跨境电商'],
-            url: 'https://erpnext.com/',
+            url: 'https://frappe.io/erpnext',
             subcategory: 'erp',
             needsMagic: true
         },
@@ -1647,8 +1647,8 @@ const sitesData = {
     ai_writing: [
         // 综合写作与逻辑之王（大模型类）
         {
-            title: 'Claude 4',
-            description: '2026 年公认文笔最像真人、逻辑最严密的写作模型，Artifacts 特别适合长文、论文和结构化编辑。',
+            title: 'Claude Opus 5.5',
+            description: 'Anthropic 的通用旗舰模型，适合长文起草、结构化编辑和复杂分析。',
             tags: ['长文写作', '结构化编辑', '低AI味'],
             url: 'https://claude.ai/',
             subcategory: 'model_reasoning',
@@ -1656,8 +1656,8 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'DeepSeek V3 / R1',
-            description: '目前性价比最高且中文语境处理极佳，思维链能力很强，特别适合技术文档和复杂逻辑分析。',
+            title: 'DeepSeek V4 系列',
+            description: 'DeepSeek 的对话入口，可用于中文写作、技术文档与推理。V4.1 Flash 也已在 API 发布。',
             tags: ['中文写作', '技术文档', '复杂推理'],
             url: 'https://chat.deepseek.com/',
             subcategory: 'model_reasoning',
@@ -1665,17 +1665,17 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'ChatGPT - GPT-5.4',
-            description: 'OpenAI 最新推理模型，擅长事实准确性要求极高的学术写作、科学报告和严谨论证。',
+            title: 'ChatGPT · GPT-6',
+            description: '适合资料整合、长文写作和多步骤推理。可用模型随套餐和使用场景变化。',
             tags: ['学术写作', '科学报告', '事实准确'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'model_reasoning',
             needsMagic: true,
             isRecommended: true
         },
         {
-            title: 'Gemini',
-            description: 'Google 生态中的多模态大模型，适合资料整合、联网辅助写作和多格式内容生成。',
+            title: 'Gemini 4 Neon',
+            description: 'Google 的多模态模型，适合资料综合与复杂知识工作。Gemini 应用向 AI Pro 和 Ultra 用户逐步开放该模型。',
             tags: ['多模态', '资料整合', '联网写作'],
             url: 'https://gemini.google.com/',
             subcategory: 'model_reasoning',
@@ -1784,7 +1784,7 @@ const sitesData = {
             title: 'Notion AI',
             description: '如果用户长期在 Notion 里办公，它的文档内嵌写作、整理与协作体验依旧是最顺手的一档。',
             tags: ['知识管理', '文档协作', '办公写作'],
-            url: 'https://www.notion.so/product/ai',
+            url: 'https://www.notion.com/product/ai',
             subcategory: 'vertical_specialized',
             needsMagic: true,
             isRecommended: true
@@ -1826,7 +1826,7 @@ const sitesData = {
             title: 'AI新媒体文章（夸克）',
             description: '夸克搜索推出的新媒体文章创作工具，支持一键生成完整文章',
             tags: ['新媒体', '一键生成', '内容创作'],
-            url: 'https://www.myquark.cn/',
+            url: 'https://www.quark.cn/',
             subcategory: 'vertical_specialized',
             needsMagic: false
         },
@@ -1866,7 +1866,7 @@ const sitesData = {
             title: 'ChatGPT',
             description: 'OpenAI开发的大型语言模型，可进行自然对话、问答和内容创作',
             tags: ['通用对话', '问答助手', '内容创作'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'general_assistant',
             isRecommended: true,
             needsMagic: true
@@ -1923,7 +1923,7 @@ const sitesData = {
             title: 'MiniMax',
             description: '国内正在快速增长的 AI 智能体平台，兼顾对话、任务拆解与多步骤执行场景',
             tags: ['AI智能体', '任务执行', '国产模型'],
-            url: 'https://www.minimaxi.com/',
+            url: 'https://www.minimax.cn/',
             subcategory: 'general_assistant',
             needsMagic: false
         },
@@ -2192,18 +2192,10 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'Codeium',
-            description: '免费的AI代码助手，提供智能代码补全和生成功能',
-            tags: ['代码补全', '免费工具', '多语言支持'],
-            url: 'https://codeium.com/',
-            subcategory: 'professional_ai',
-            needsMagic: true
-        },
-        {
             title: 'Cursor',
             description: '集成AI的代码编辑器，可以理解、解释和生成代码',
             tags: ['AI编辑器', '代码理解', '快速开发'],
-            url: 'https://cursor.sh/',
+            url: 'https://cursor.com/',
             subcategory: 'professional_ai',
             needsMagic: true
         },
@@ -2850,10 +2842,10 @@ const sitesData = {
     ai_video: [
         // 文本生成视频
         {
-            title: 'Runway Gen-2',
-            description: '先进的文本到视频AI系统，通过文字描述生成高质量的短视频内容',
+            title: 'Runway Gen-4.5',
+            description: '通过文本或参考图片生成短视频，可用自然语言描述镜头与动作。',
             tags: ['文本生成视频', '创意合成', 'AI特效'],
-            url: 'https://runway.com/gen-2',
+            url: 'https://app.runwayml.com/',
             subcategory: 'text_to_video',
             needsMagic: true
         },
@@ -2909,7 +2901,7 @@ const sitesData = {
             title: 'DeepBrain AI',
             description: '创建逼真的AI虚拟人进行视频演讲和讲解，适合企业和教育用途',
             tags: ['虚拟人', '企业演示', '教育培训'],
-            url: 'https://www.deepbrain.io/',
+            url: 'https://www.aistudios.com/',
             subcategory: 'text_to_video',
             needsMagic: true
         },
@@ -2993,7 +2985,7 @@ const sitesData = {
             title: 'Vrew',
             description: '智能视频编辑工具，自动识别语音内容并生成字幕',
             tags: ['自动剪辑', '语音识别', '字幕生成'],
-            url: 'https://vrew.voyagerx.com/',
+            url: 'https://vrew.ai/en/',
             subcategory: 'video_editing',
             needsMagic: true
         },
@@ -3051,7 +3043,7 @@ const sitesData = {
             title: 'DeepBrain AI Studios',
             description: '创建超逼真AI虚拟人，可用于新闻播报、教育和营销',
             tags: ['超逼真', '多场景', '企业应用'],
-            url: 'https://www.deepbrain.io/solutions/studios',
+            url: 'https://www.aistudios.com/',
             subcategory: 'digital_human',
             needsMagic: true
         },
@@ -3068,14 +3060,6 @@ const sitesData = {
             description: '创建定制化数字人，适合客户服务和品牌代言',
             tags: ['定制数字人', '品牌代言', '客户服务'],
             url: 'https://www.simulai.co/',
-            subcategory: 'digital_human',
-            needsMagic: true
-        },
-        {
-            title: 'Vidnami',
-            description: '自动生成数字人视频内容，适合社交媒体和营销',
-            tags: ['数字人', '社交视频', '自动生成'],
-            url: 'https://vidnami.com/',
             subcategory: 'digital_human',
             needsMagic: true
         },
@@ -3167,7 +3151,7 @@ const sitesData = {
             title: 'Vimeo AI Tools',
             description: '专业视频平台提供的AI编辑和增强工具，提升创作效率',
             tags: ['专业平台', 'AI编辑', '创作辅助'],
-            url: 'https://vimeo.com/features/ai-video-tools',
+            url: 'https://help.vimeo.com/hc/en-us/articles/22089057744657-About-Vimeo-AI',
             subcategory: 'short_video',
             needsMagic: true
         },
@@ -3201,7 +3185,7 @@ const sitesData = {
             title: 'Synclabs',
             description: '专业的AI语音驱动视频合成平台，提供高质量的唇形同步',
             tags: ['专业平台', '高质量', '商业应用'],
-            url: 'https://www.synclabs.so/',
+            url: 'https://sync.so/',
             subcategory: 'speech_driven',
             needsMagic: true
         },
@@ -3215,14 +3199,6 @@ const sitesData = {
         },
         
         // 专业级视频生成
-        {
-            title: 'Sora',
-            description: 'OpenAI开发的文本到视频生成模型，可创建长达60秒的电影级视频',
-            tags: ['电影级', 'OpenAI', '高质量'],
-            url: 'https://openai.com/sora',
-            subcategory: 'professional_video',
-            needsMagic: true
-        },
         {
             title: 'Luma AI',
             description: '3D场景生成和视频创作平台，支持逼真的环境和角色',
@@ -3336,10 +3312,10 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: '俄亥俄州洛沃',
-            description: '支持500+声音和100种语言的AI语音合成平台',
-            tags: ['多语言', '丰富音色', '广泛支持'],
-            url: 'https://coqui.ai/',
+            title: 'Coqui TTS（Idiap）',
+            description: 'Idiap 维护的 Coqui 开源文字转语音工具，可本地运行多语种语音合成模型。',
+            tags: ["开源语音合成", "本地运行", "多语言"],
+            url: 'https://github.com/idiap/coqui-ai-TTS',
             subcategory: 'tts',
             needsMagic: true
         },
@@ -3392,14 +3368,6 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: '播放.ht',
-            description: '超真实AI语音生成工具，提供自然流畅的语音合成',
-            tags: ['超真实', 'AI语音', '自然流畅'],
-            url: 'https://play.ht/',
-            subcategory: 'tts',
-            needsMagic: true
-        },
-        {
             title: '墨菲人工智能',
             description: '文本转语音工具，支持多种语言和声音风格',
             tags: ['多语言', '声音风格', 'AI合成'],
@@ -3413,7 +3381,7 @@ const sitesData = {
             title: '太阳',
             description: '高质量AI音乐创作平台，生成专业水准的音乐作品',
             tags: ['高质量', '音乐创作', 'AI作曲'],
-            url: 'https://www.suno.ai/',
+            url: 'https://suno.com/',
             subcategory: 'music_generation',
             needsMagic: true
         },
@@ -3637,10 +3605,10 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: '音响盒',
-            description: 'Meta开源语音生成模型，创新音频技术平台',
-            tags: ['Meta', '开源模型', '语音生成'],
-            url: 'https://github.com/facebookresearch/audiobox',
+            title: 'Meta Audiobox',
+            description: 'Meta 的语音和音效生成研究演示，提供音频示例和体验入口。',
+            tags: ["Meta", "语音生成", "音效实验"],
+            url: 'https://audiobox.metademolab.com/',
             subcategory: 'other_audio_tools',
             needsMagic: true
         }
@@ -3802,10 +3770,10 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'Galileo AI',
-            description: '高保真UI原型设计工具，通过文本描述生成精细界面',
+            title: 'Google Stitch',
+            description: 'Google 的界面设计工具，可从文字或参考图片生成和迭代 UI。',
             tags: ['高保真', '原型设计', '文本生成'],
-            url: 'https://www.usegalileo.ai/',
+            url: 'https://stitch.google.com/',
             subcategory: 'ui_ux',
             needsMagic: true
         },
@@ -4001,7 +3969,7 @@ const sitesData = {
             title: 'Vizcom',
             description: '手绘图转产品设计图工具，将概念草图转为精细渲染',
             tags: ['手绘转换', '产品设计', '精细渲染'],
-            url: 'https://www.vizcom.ai/',
+            url: 'https://vizcom.com/',
             subcategory: 'model_design',
             needsMagic: true
         },
@@ -4125,14 +4093,6 @@ const sitesData = {
         },
         
         // Low-Code设计
-        {
-            title: 'Motiff',
-            description: '猿辅导UI工具，提供低代码设计和开发解决方案',
-            tags: ['猿辅导', 'UI工具', '低代码'],
-            url: 'https://motiff.yuanfudao.com/',
-            subcategory: 'special_tools',
-            needsMagic: false
-        }
     ],
     
     // AI编程
@@ -4198,7 +4158,7 @@ const sitesData = {
             title: '通义灵码',
             description: '阿里推出的智能编程助手，支持代码生成与补全',
             tags: ['阿里', '代码生成', '智能编程'],
-            url: 'https://tongyi.aliyun.com/lingma',
+            url: 'https://lingma.aliyun.com/lingma',
             subcategory: 'code_generation',
             needsMagic: false
         },
@@ -4275,14 +4235,6 @@ const sitesData = {
             description: '阿里开发的设计稿转前端代码工具，提高开发效率',
             tags: ['阿里', '设计转代码', '前端开发'],
             url: 'https://www.imgcook.com/',
-            subcategory: 'design_to_code',
-            needsMagic: false
-        },
-        {
-            title: 'Deco',
-            description: '京东开发的设计稿转多端代码工具，支持多平台',
-            tags: ['京东', '设计转代码', '多端开发'],
-            url: 'https://deco-preview.jd.com/',
             subcategory: 'design_to_code',
             needsMagic: false
         },
@@ -4415,14 +4367,6 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'Debuild',
-            description: '低代码网页开发平台，简化Web应用创建',
-            tags: ['低代码', '网页开发', 'Web应用'],
-            url: 'https://debuild.co/',
-            subcategory: 'low_code',
-            needsMagic: true
-        },
-        {
             title: 'Meoo',
             description: 'AI 应用创建平台，可将 Excel、PPT、简历等内容快速生成 H5、网页应用和可交互演示页面',
             tags: ['AI应用生成', 'H5创建', '可视化演示'],
@@ -4457,18 +4401,18 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'Windsurf',
-            description: 'Codeium推出的AI原生编程编辑器，支持代理式改代码、理解代码库和自动执行开发流程',
+            title: 'Devin Desktop',
+            description: '用于管理本地和云端编程代理、跟踪任务与审查改动的桌面应用。',
             tags: ['AI编辑器', '代理式编程', '代码库理解'],
-            url: 'https://windsurf.com/',
+            url: 'https://devin.ai/desktop',
             subcategory: 'cloud_ide',
             needsMagic: true
         },
         {
-            title: 'Project IDX',
-            description: '谷歌开发的云端IDE，支持多种编程语言和框架',
+            title: 'Google AI Studio',
+            description: 'Google 推荐的网页原型开发入口，可使用 Gemini 构建和迭代应用。',
             tags: ['谷歌', '云端IDE', '多语言支持'],
-            url: 'https://developers.google.com/idx',
+            url: 'https://aistudio.google.com/',
             subcategory: 'cloud_ide',
             needsMagic: true
         },
@@ -4562,14 +4506,6 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'ChatGPT Shortcut',
-            description: '中文快捷指令库，分类明确（写作、营销、编程等），一键调用。',
-            tags: ['中文指令库', '快捷调用', '分类明确'],
-            url: 'https://newzone.top/chatgpt-shortcuts',
-            subcategory: 'chatgpt_prompts',
-            needsMagic: false
-        },
-        {
             title: 'AIPRM',
             description: 'ChatGPT浏览器插件，内置数百个预设提示词（SEO、数据分析等）。',
             tags: ['浏览器插件', '预设提示词', 'SEO'],
@@ -4598,10 +4534,10 @@ const sitesData = {
         
         // 中文特色资源
         {
-            title: 'AI Short',
-            description: '中文精简提示词生成器，输入关键词快速输出优化指令。',
-            tags: ['中文生成器', '精简提示词', '关键词优化'],
-            url: 'https://aishort.top',
+            title: 'AI Short（ChatGPT Shortcut）',
+            description: '按写作、营销、编程等场景查找和复制提示词的双语资源库。',
+            tags: ["提示词库", "中文资源", "快捷复制"],
+            url: 'https://www.aishort.top/',
             subcategory: 'chinese_resources',
             needsMagic: false
         },
@@ -5122,7 +5058,7 @@ const sitesData = {
             descriptionEn: 'Official OpenAI examples and best practices for API usage, sample code and prompt engineering patterns.',
             tags: ['OpenAI', '示例代码', '最佳实践'],
             tagsEn: ['OpenAI', 'Code Examples', 'Best Practices'],
-            url: 'https://cookbook.openai.com/',
+            url: 'https://developers.openai.com/cookbook',
             subcategory: 'tech_tutorials',
             isRecommended: true
         },
@@ -5221,7 +5157,7 @@ const sitesData = {
             descriptionEn: 'Discover, install and share AI skill plugins in the OpenClaw ecosystem.',
             tags: ['ClawHub', '技能市场', '插件生态'],
             tagsEn: ['ClawHub', 'Skill Marketplace', 'Plugin Ecosystem'],
-            url: 'https://clawhub.com/',
+            url: 'https://clawhub.ai/',
             subcategory: 'tech_official_docs',
             isRecommended: true
         },
@@ -5259,13 +5195,13 @@ const sitesData = {
             isRecommended: false
         },
         {
-            title: 'ClawHub Skills 仓库',
-            titleEn: 'ClawHub Skills Repository',
-            description: '所有已发布技能的源码归档。',
-            descriptionEn: 'Repository archive containing the source code for published ClawHub skills.',
-            tags: ['ClawHub', 'GitHub', '技能源码'],
-            tagsEn: ['ClawHub', 'GitHub', 'Skill Source'],
-            url: 'https://github.com/openclaw/skills',
+            title: 'ClawHub 官方文档',
+            titleEn: 'ClawHub Documentation',
+            description: 'OpenClaw 的 ClawHub 官方指南，介绍如何查找、安装和发布技能。',
+            descriptionEn: 'Official OpenClaw guide to finding, installing, and publishing ClawHub skills.',
+            tags: ["ClawHub", "OpenClaw", "官方文档"],
+            tagsEn: ["ClawHub", "OpenClaw", "Documentation"],
+            url: 'https://docs.openclaw.ai/clawhub',
             subcategory: 'tech_official_docs',
             isRecommended: false
         },
@@ -5430,7 +5366,7 @@ const sitesData = {
             descriptionEn: 'Official Fly.io docs for global deployment, containers, volumes and application delivery.',
             tags: ['Fly.io', '全球部署', '容器运行'],
             tagsEn: ['Fly.io', 'Global Deployments', 'Containers'],
-            url: 'https://fly.io/docs/',
+            url: 'https://docs.fly.io/',
             subcategory: 'tech_deploy_ops',
             isRecommended: false
         },
@@ -6365,13 +6301,6 @@ const aiSearchData = [
         description: "AI菜谱搜索引擎，根据食材和偏好推荐菜谱",
         url: "https://www.recipegpt.com/",
         tags: ["菜谱", "烹饪"],
-        subcategory: "life_search"
-    },
-    {
-        name: "Tripnotes",
-        description: "AI旅行笔记助手，个性化旅行建议和攻略",
-        url: "https://tripnotes.ai/",
-        tags: ["旅行笔记", "个性化攻略"],
         subcategory: "life_search"
     },
     {

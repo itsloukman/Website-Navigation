@@ -564,7 +564,7 @@ const sitesData = {
             title: 'ChatGPT',
             description: 'OpenAI开发的大型语言模型，能够进行自然对话和信息检索',
             tags: ['Dialogue AI', 'Natural Language Processing', 'Information Retrieval'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'content',
             isRecommended: true,
             needsMagic: true
@@ -1129,7 +1129,7 @@ const sitesData = {
             title: 'ERPNext',
             description: 'Open-source ERP for technical teams with cross-border e-commerce modules',
             tags: ['Open-Source', 'Custom Development', 'Cross-Border E-Commerce'],
-            url: 'https://erpnext.com/',
+            url: 'https://frappe.io/erpnext',
             subcategory: 'erp',
             needsMagic: true
         },
@@ -1392,8 +1392,8 @@ const sitesData = {
     ai_writing: [
         // Writing & Reasoning Models
         {
-            title: 'Claude 4',
-            description: 'Widely seen in 2026 as the most human-sounding and structurally reliable writing model, with Artifacts excelling at long-form editing.',
+            title: 'Claude Opus 5.5',
+            description: 'Anthropic’s general-purpose flagship for drafting, structured editing, and complex analysis.',
             tags: ['Long-Form Writing', 'Structured Editing', 'Natural Prose'],
             url: 'https://claude.ai/',
             subcategory: 'model_reasoning',
@@ -1401,8 +1401,8 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'DeepSeek V3 / R1',
-            description: 'High value and especially strong in Chinese context, with chain-of-thought performance that stands out for technical docs and complex analysis.',
+            title: 'DeepSeek V4 Series',
+            description: 'DeepSeek’s chat entry point for writing, technical documents, and reasoning. V4.1 Flash is also available in the API.',
             tags: ['Chinese Writing', 'Technical Docs', 'Reasoning'],
             url: 'https://chat.deepseek.com/',
             subcategory: 'model_reasoning',
@@ -1410,17 +1410,17 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'ChatGPT - GPT-5.4',
-            description: 'OpenAI\'s latest reasoning model for academic writing, scientific reporting, and work that depends on high factual precision.',
+            title: 'ChatGPT · GPT-6',
+            description: 'Use ChatGPT for research synthesis, long-form writing, and multi-step reasoning. Model availability varies by plan and product.',
             tags: ['Academic Writing', 'Scientific Reports', 'Fact Accuracy'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'model_reasoning',
             needsMagic: true,
             isRecommended: true
         },
         {
-            title: 'Gemini',
-            description: 'Google\'s multimodal model for research synthesis, web-assisted drafting, and multi-format content generation.',
+            title: 'Gemini 4 Neon',
+            description: 'Google’s multimodal model for research synthesis and complex knowledge work, rolling out in the Gemini app to AI Pro and Ultra subscribers.',
             tags: ['Multimodal', 'Research Synthesis', 'Web-Assisted Writing'],
             url: 'https://gemini.google.com/',
             subcategory: 'model_reasoning',
@@ -1529,7 +1529,7 @@ const sitesData = {
             title: 'Notion AI',
             description: 'If you already live inside Notion, its embedded writing flow is still one of the best productivity-native writing experiences available.',
             tags: ['Knowledge Base', 'Embedded Writing', 'Workflows'],
-            url: 'https://www.notion.so/product/ai',
+            url: 'https://www.notion.com/product/ai',
             subcategory: 'vertical_specialized',
             needsMagic: true,
             isRecommended: true
@@ -1571,7 +1571,7 @@ const sitesData = {
             title: 'AI New Media Articles (Quark)',
             description: 'A new media article creation tool launched by Quark Search, supporting one-click generation of complete articles.',
             tags: ['new media', 'one-click generation', 'content creation'],
-            url: 'https://www.myquark.cn/',
+            url: 'https://www.quark.cn/',
             subcategory: 'vertical_specialized',
             needsMagic: false
         },
@@ -2034,7 +2034,7 @@ const sitesData = {
             title: 'ChatGPT',
             description: 'OpenAI assistant for general chat, writing, brainstorming, and problem solving',
             tags: ['general chat', 'Q&A assistant', 'content creation'],
-            url: 'https://chat.openai.com/',
+            url: 'https://chatgpt.com/',
             subcategory: 'general_assistant',
             isRecommended: true,
             needsMagic: true
@@ -2099,7 +2099,7 @@ const sitesData = {
             title: 'MiniMax',
             description: 'Fast-rising Chinese AI agent platform for chat, task decomposition and multi-step execution workflows',
             tags: ['AI agent', 'task execution', 'domestic model'],
-            url: 'https://www.minimaxi.com/',
+            url: 'https://www.minimax.cn/',
             subcategory: 'general_assistant',
             needsMagic: false
         },
@@ -2176,7 +2176,7 @@ const sitesData = {
             title: 'NotebookLM',
             description: 'Google AI notebook assistant focused on source-grounded document Q&A',
             tags: ['document Q&A', 'research', 'source grounding'],
-            url: 'https://notebooklm.google.com/',
+            url: 'https://notebook.google.com/',
             subcategory: 'multimodal_ai',
             needsMagic: true
         },
@@ -2236,10 +2236,10 @@ const sitesData = {
     "ai_video": [
         // Text-to-Video Generation
         {
-            "title": "Runway Gen-2",
-            "description": "An advanced text-to-video AI system that can generate high-quality short video content through text descriptions",
+            "title": "Runway Gen-4.5",
+            "description": "Generate short videos from text or reference images and describe camera work and motion in natural language.",
             "tags": ["text-to-video generation", "creative synthesis", "AI special effects"],
-            "url": "https://runway.com/gen-2",
+            "url": "https://app.runwayml.com/",
             "subcategory": "text_to_video",
             "needsMagic": true
         },
@@ -2295,7 +2295,7 @@ const sitesData = {
             "title": "DeepBrain AI",
             "description": "Creates realistic AI virtual humans for video speeches and explanations, suitable for corporate and educational use",
             "tags": ["virtual human", "corporate presentation", "education and training"],
-            "url": "https://www.deepbrain.io/",
+            "url": "https://www.aistudios.com/",
             "subcategory": "text_to_video",
             "needsMagic": true
         },
@@ -2377,7 +2377,7 @@ const sitesData = {
             "title": "Vrew",
             "description": "Smart video editing tool that automatically recognizes speech content and generates subtitles",
             "tags": ["auto editing", "speech recognition", "subtitle generation"],
-            "url": "https://vrew.voyagerx.com/",
+            "url": "https://vrew.ai/en/",
             "subcategory": "video_editing",
             "needsMagic": true
         },
@@ -2435,7 +2435,7 @@ const sitesData = {
             title: 'DeepBrain AI Studios',
             description: 'Create ultra-realistic AI virtual humans for news broadcasting, education and marketing',
             tags: ['ultra-realistic', 'multi-scenario', 'enterprise applications'],
-            url: 'https://www.deepbrain.io/solutions/studios',
+            url: 'https://www.aistudios.com/',
             subcategory: 'digital_human',
             needsMagic: true
         },
@@ -2452,14 +2452,6 @@ const sitesData = {
             description: 'Create customized digital humans suitable for customer service and brand endorsements',
             tags: ['custom digital human', 'brand endorsement', 'customer service'],
             url: 'https://www.simulai.co/',
-            subcategory: 'digital_human',
-            needsMagic: true
-        },
-        {
-            title: 'Vidnami',
-            description: 'Automatically generate digital human video content suitable for social media and marketing',
-            tags: ['digital human', 'social video', 'auto generation'],
-            url: 'https://vidnami.com/',
             subcategory: 'digital_human',
             needsMagic: true
         },
@@ -2550,7 +2542,7 @@ const sitesData = {
             title: 'Vimeo AI Tools',
             description: 'Professional video platform provides AI editing and enhancement tools to improve creation efficiency',
             tags: ['professional platform', 'AI editing', 'creation assistance'],
-            url: 'https://vimeo.com/features/ai-video-tools',
+            url: 'https://help.vimeo.com/hc/en-us/articles/22089057744657-About-Vimeo-AI',
             subcategory: 'short_video',
             needsMagic: true
         },
@@ -2584,7 +2576,7 @@ const sitesData = {
             title: 'Synclabs',
             description: 'Professional AI speech-driven video synthesis platform offering high-quality lip synchronization',
             tags: ['professional platform', 'high quality', 'commercial use'],
-            url: 'https://www.synclabs.so/',
+            url: 'https://sync.so/',
             subcategory: 'speech_driven', 
             needsMagic: true
         },
@@ -2594,14 +2586,6 @@ const sitesData = {
             tags: ['lip sync', 'multilingual', 'post-production'],
             url: 'https://www.lipdub.ai/',
             subcategory: 'speech_driven',
-            needsMagic: true
-        },
-        {
-            title: 'Sora',
-            description: 'Text-to-video generation model by OpenAI, capable of creating movie-quality videos up to 60 seconds',
-            tags: ['movie quality', 'OpenAI', 'high quality'],
-            url: 'https://openai.com/sora',
-            subcategory: 'professional_video',
             needsMagic: true
         },
         {
@@ -2714,10 +2698,10 @@ const sitesData = {
                 needsMagic: false
             },
             {
-                title: 'Coqui AI',
-                description: 'AI voice synthesis platform supporting 500+ voices and 100 languages',
-                tags: ['Multi-language', 'Rich Voice Options', 'Wide Support'],
-                url: 'https://coqui.ai/',
+                title: 'Coqui TTS (Idiap)',
+                description: 'An Idiap-maintained fork of the open-source Coqui toolkit for running multilingual text-to-speech models locally.',
+                tags: ["Open-source TTS", "Local Inference", "Multilingual"],
+                url: 'https://github.com/idiap/coqui-ai-TTS',
                 subcategory: 'tts',
                 needsMagic: true
         },
@@ -2770,14 +2754,6 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: 'Play.ht',
-            description: 'Ultra-realistic AI voice generation tool providing natural and fluent voice synthesis',
-            tags: ['Ultra-realistic', 'AI Voice', 'Natural Fluency'],
-            url: 'https://play.ht/',
-            subcategory: 'tts',
-            needsMagic: true
-        },
-        {
             title: 'Murf AI',
             description: 'Text-to-speech tool supporting multiple languages and voice styles',
             tags: ['Multi-language', 'Voice Styles', 'AI Synthesis'],
@@ -2791,7 +2767,7 @@ const sitesData = {
             title: 'Suno',
             description: 'High-quality AI music creation platform, generating professional-grade musical works',
             tags: ['High Quality', 'Music Creation', 'AI Composition'],
-            url: 'https://www.suno.ai/',
+            url: 'https://suno.com/',
             subcategory: 'music_generation',
             needsMagic: true
         },
@@ -3015,10 +2991,10 @@ const sitesData = {
             "needsMagic": false
         },
         {
-            "title": "Audiobox",
-            "description": "Meta's open-source speech generation model, an innovative audio technology platform",
-            "tags": ["Meta", "open-source model", "speech generation"],
-            "url": "https://github.com/facebookresearch/audiobox",
+            "title": "Meta Audiobox",
+            "description": "Meta’s research demo for generating speech and sound effects, with audio examples and a demo.",
+            "tags": ["Meta", "Speech Generation", "Sound Effects"],
+            "url": "https://audiobox.metademolab.com/",
             "subcategory": "other_audio_tools",
             "needsMagic": true
         }
@@ -3180,10 +3156,10 @@ const sitesData = {
             "needsMagic": true
         },
         {
-            "title": "Galileo AI",
-            "description": "A high-fidelity UI prototyping tool generating detailed interfaces from text descriptions",
+            "title": "Google Stitch",
+            "description": "Google’s interface design tool for generating and iterating on UI from text or reference images.",
             "tags": ["high-fidelity", "prototyping", "text generation"],
-            "url": "https://www.usegalileo.ai/",
+            "url": "https://stitch.google.com/",
             "subcategory": "ui_ux",
             "needsMagic": true
         },
@@ -3378,7 +3354,7 @@ const sitesData = {
         "title": "Vizcom",
         "description": "Hand-drawn-to-product-design tool converting concept sketches to detailed renderings",
         "tags": ["hand-drawn conversion", "product design", "detailed rendering"],
-        "url": "https://www.vizcom.ai/",
+        "url": "https://vizcom.com/",
         "subcategory": "model_design",
         "needsMagic": true
     },
@@ -3503,26 +3479,10 @@ const sitesData = {
         
         // Low-Code设计
         {
-            title: 'Motiff',
-            description: 'Yuanfudao-backed UI tool offering low-code design and developer handoff workflows',
-            tags: ['Yuanfudao', 'UI tools', 'low-code'],
-            url: 'https://motiff.yuanfudao.com/',
-            subcategory: 'special_tools',
-            needsMagic: false
-        },
-        {
             title: 'AfterNIC',
             description: 'Aftermarket domain platform focused on premium domains and specialized domain extensions',
             tags: ['Premium Domains', 'Specialized Extensions', 'Domain Aftermarket'],
             url: 'https://www.afternic.com/',
-            subcategory: 'domain',
-            needsMagic: true
-        },
-        {
-            title: 'Dan.com',
-            description: 'Domain transaction platform providing secure payment processing and ownership transfer services',
-            tags: ['Secure Transactions', 'Domain Sales', 'Escrow Services'],
-            url: 'https://dan.com/',
             subcategory: 'domain',
             needsMagic: true
         },
@@ -3718,7 +3678,7 @@ const sitesData = {
         "title": "Tongyi Lingma",
         "description": "Alibaba's intelligent programming assistant supporting code generation and completion",
         "tags": ["Alibaba", "code generation", "intelligent programming"],
-        "url": "https://tongyi.aliyun.com/lingma",
+        "url": "https://lingma.aliyun.com/lingma",
         "subcategory": "code_generation",
         "needsMagic": false
     },
@@ -3795,14 +3755,6 @@ const sitesData = {
         "description": "Alibaba's design-to-frontend-code tool improving development efficiency",
         "tags": ["Alibaba", "design to code", "frontend development"],
         "url": "https://www.imgcook.com/",
-        "subcategory": "design_to_code",
-        "needsMagic": false
-    },
-    {
-        "title": "Deco",
-        "description": "JD.com's design-to-multi-terminal-code tool supporting multiple platforms",
-        "tags": ["JD.com", "Design to Code", "Multi-platform"],
-        "url": "https://deco-preview.jd.com/",
         "subcategory": "design_to_code",
         "needsMagic": false
     },
@@ -3935,14 +3887,6 @@ const sitesData = {
         "needsMagic": true
     },
     {
-        "title": "Debuild",
-        "description": "Low-code web development platform to simplify web application creation",
-        "tags": ["low-code", "web development", "web applications"],
-        "url": "https://debuild.co/",
-        "subcategory": "low_code",
-        "needsMagic": true
-    },
-    {
         "title": "Meoo",
         "description": "AI app creation platform that turns Excel, PPTs and resumes into H5 apps, interactive demos and web pages",
         "tags": ["AI app generation", "H5 builder", "interactive demos"],
@@ -3977,18 +3921,18 @@ const sitesData = {
             needsMagic: true
         },
     {
-        "title": "Windsurf",
-        "description": "Codeium's AI-native coding editor built for agentic code changes, repo understanding and automated dev workflows",
+        "title": "Devin Desktop",
+        "description": "A desktop app for managing local and cloud coding agents, tracking tasks, and reviewing changes.",
         "tags": ["AI editor", "agentic coding", "repo understanding"],
-        "url": "https://windsurf.com/",
+        "url": "https://devin.ai/desktop",
         "subcategory": "cloud_ide",
         "needsMagic": true
     },
     {
-        "title": "Project IDX",
-        "description": "Google-developed cloud IDE supporting multiple programming languages and frameworks",
+        "title": "Google AI Studio",
+        "description": "Google’s recommended browser-based tool for building and iterating on app prototypes with Gemini.",
         "tags": ["Google", "cloud IDE", "multi-language support"],
-        "url": "https://developers.google.com/idx",
+        "url": "https://aistudio.google.com/",
         "subcategory": "cloud_ide",
         "needsMagic": true
     },
@@ -4082,14 +4026,6 @@ const sitesData = {
         "needsMagic": true
     },
     {
-        "title": "ChatGPT Shortcut",
-        "description": "Chinese shortcut command library with clear categorization (writing, marketing, programming, etc.) for one-click invocation.",
-        "tags": ["Chinese command library", "shortcut invocation", "clear categorization"],
-        "url": "https://newzone.top/chatgpt-shortcuts",
-        "subcategory": "chatgpt_prompts",
-        "needsMagic": false
-    },
-    {
         "title": "AIPRM",
         "description": "ChatGPT browser plugin with hundreds of preset prompts (SEO, data analysis, etc.).",
         "tags": ["browser plugin", "preset prompts", "SEO"],
@@ -4118,10 +4054,10 @@ const sitesData = {
     
     // 中文特色资源
     {
-        "title": "AI Short",
-        "description": "Chinese concise prompt generator that quickly outputs optimized commands from keywords.",
-        "tags": ["Chinese generator", "concise prompts", "keyword optimization"],
-        "url": "https://aishort.top",
+        "title": "AI Short (ChatGPT Shortcut)",
+        "description": "A bilingual library of prompts to browse and copy for writing, marketing, and coding.",
+        "tags": ["Prompt Library", "Chinese Resources", "Quick Copy"],
+        "url": "https://www.aishort.top/",
         "subcategory": "chinese_resources",
         "needsMagic": false
     },
@@ -4519,7 +4455,7 @@ const sitesData = {
             title: 'OpenAI Cookbook',
             description: 'Official OpenAI examples and best practices for API usage, sample code and prompt engineering patterns.',
             tags: ['OpenAI', 'Code Examples', 'Best Practices'],
-            url: 'https://cookbook.openai.com/',
+            url: 'https://developers.openai.com/cookbook',
             subcategory: 'tech_tutorials',
             isRecommended: true
         },
@@ -4591,7 +4527,7 @@ const sitesData = {
             title: 'ClawHub Skill Marketplace',
             description: 'Discover, install and share AI skill plugins in the OpenClaw ecosystem.',
             tags: ['ClawHub', 'Skill Marketplace', 'Plugin Ecosystem'],
-            url: 'https://clawhub.com/',
+            url: 'https://clawhub.ai/',
             subcategory: 'tech_official_docs',
             isRecommended: true
         },
@@ -4620,10 +4556,10 @@ const sitesData = {
             isRecommended: false
         },
         {
-            title: 'ClawHub Skills Repository',
-            description: 'Repository archive containing the source code for published ClawHub skills.',
-            tags: ['ClawHub', 'GitHub', 'Skill Source'],
-            url: 'https://github.com/openclaw/skills',
+            title: 'ClawHub Documentation',
+            description: 'Official OpenClaw guide to finding, installing, and publishing ClawHub skills.',
+            tags: ["ClawHub", "OpenClaw", "Documentation"],
+            url: 'https://docs.openclaw.ai/clawhub',
             subcategory: 'tech_official_docs',
             isRecommended: false
         },
@@ -4743,7 +4679,7 @@ const sitesData = {
             title: 'Fly.io Docs',
             description: 'Official Fly.io docs for global deployment, containers, volumes and application delivery.',
             tags: ['Fly.io', 'Global Deployments', 'Containers'],
-            url: 'https://fly.io/docs/',
+            url: 'https://docs.fly.io/',
             subcategory: 'tech_deploy_ops',
             isRecommended: false
         },
@@ -5595,13 +5531,6 @@ const aiSearchData = [
         description: "AI recipe search engine, recommending recipes based on ingredients and preferences",
         url: "https://www.recipegpt.com/",
         tags: ["Recipe", "Cooking"],
-        subcategory: "life_search"
-    },
-    {
-        name: "Tripnotes",
-        description: "AI travel notes assistant, personalized travel suggestions and攻略",
-        url: "https://tripnotes.ai/",
-        tags: ["Travel Notes", "Personalized Guides"],
         subcategory: "life_search"
     },
     {
