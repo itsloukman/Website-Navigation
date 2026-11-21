@@ -709,10 +709,18 @@
                     <h2 id="github-repos-heading"><i class="bi bi-github"></i> GitHub Open Source Picks</h2>
                 </div>
                 <div class="subcategory-nav">
-                    <button type="button" class="subcategory-btn active" onclick="filterSubcategoryGeneric('github-repos', 'all')">All</button>
-                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">Agent Skills</button>
-                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">Example Libraries</button>
+                    <button type="button" class="subcategory-btn active" aria-pressed="true" onclick="filterSubcategoryGeneric('github-repos', 'all')">All</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">Agent Skills</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/workflow')">General Workflows</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/development')">Development & Testing</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/automation')">Web Automation</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/writing')">Writing & Marketing</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/research')">Research & Knowledge</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/design')">Design & Video</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/office')">Office & Documents</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">Example Libraries</button>
                 </div>
+                <p class="small text-muted mb-3">Popular picks draw on <a href="https://www.skills.sh/" target="_blank" rel="noopener noreferrer">Skills.sh</a> total installs (Nov 21, 2026).</p>
                 <div id="github-repos-grid" class="site-grid"></div>
             </section>
 
@@ -782,9 +790,9 @@
     </div>
 
     <!-- JavaScript dependencies -->
-    <script src="js/sites-data-en.js?v=creator-skills-20261121"></script>
+    <script src="js/sites-data-en.js?v=skill-categories-20261121"></script>
     <script src="js/language.js"></script>
-    <script src="js/scripts.js?v=github-open-source"></script>
+    <script src="js/scripts.js?v=skill-categories-20261121"></script>
 
     <!-- Initialize language -->
     <script>

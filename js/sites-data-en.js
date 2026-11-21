@@ -9,11 +9,137 @@
 const sitesData = {
     github_repos: [
         {
+            title: 'find-skills',
+            description: 'Find installable agent skills by task or capability.',
+            tags: ['GitHub', 'Agent Skills', 'General Workflows'],
+            url: 'https://github.com/vercel-labs/skills/tree/main/skills/find-skills',
+            subcategory: 'github_skills/workflow'
+        },
+        {
+            title: 'agent-browser',
+            description: 'Open pages, inspect their accessibility structure, and interact with browser controls.',
+            tags: ['GitHub', 'Agent Skills', 'Web Automation'],
+            url: 'https://github.com/vercel-labs/agent-browser',
+            subcategory: 'github_skills/automation'
+        },
+        {
+            title: 'hyperframes',
+            description: 'Render HTML animations and timelines into videos for explainers, intros, and demos.',
+            tags: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/heygen-com/hyperframes/tree/main/skills/hyperframes',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'grill-me',
+            description: 'Pressure-test a plan through follow-up questions about assumptions, tradeoffs, and open decisions.',
+            tags: ['GitHub', 'Agent Skills', 'General Workflows'],
+            url: 'https://github.com/mattpocock/skills',
+            subcategory: 'github_skills/workflow'
+        },
+        {
+            title: 'design-mobile-apps',
+            description: 'Design mobile screens in Sleek and implement them in React Native or HTML.',
+            tags: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/designed-by-ai/skills/tree/main/skills/design-mobile-apps',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'frontend-design',
+            description: 'Guide visual direction, typography, and interaction details for new or existing frontends.',
+            tags: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/frontend-design',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'vercel-react-best-practices',
+            description: 'Vercel guidance for React and Next.js performance, covering data fetching, bundles, and re-renders.',
+            tags: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'paper-context-resolver',
+            description: 'Verify missing reproduction details such as dataset splits and evaluation settings against the original paper.',
+            tags: ['GitHub', 'Agent Skills', 'Research & Knowledge'],
+            url: 'https://github.com/lllllllama/RigorPilot-Skills/tree/main/skills/paper-context-resolver',
+            subcategory: 'github_skills/research'
+        },
+        {
+            title: 'lark-doc',
+            description: 'Read, create, and update Feishu cloud documents and wiki pages with the Lark CLI.',
+            tags: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/larksuite/cli/tree/main/skills/lark-doc',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'supabase-postgres-best-practices',
+            description: 'Review PostgreSQL indexes, queries, schemas, and access policies with Supabase guidance.',
+            tags: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/supabase/agent-skills/tree/main/skills/supabase-postgres-best-practices',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'systematic-debugging',
+            description: 'Reproduce failures, trace their root cause, and test hypotheses before making a fix.',
+            tags: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/obra/superpowers/tree/main/skills/systematic-debugging',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'copywriting',
+            description: 'Draft or revise homepage, landing-page, and pricing copy for a specific audience and conversion goal.',
+            tags: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'seo-audit',
+            description: 'Check indexing, page structure, and technical SEO for issues affecting search visibility.',
+            tags: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'pdf',
+            description: 'Extract text and tables, process scans, and create, merge, or split PDF files.',
+            tags: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/pdf',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'webapp-testing',
+            description: 'Use Playwright to test local web interactions, capture screenshots, and inspect browser logs.',
+            tags: ['GitHub', 'Agent Skills', 'Web Automation'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/webapp-testing',
+            subcategory: 'github_skills/automation'
+        },
+        {
+            title: 'xlsx',
+            description: 'Create or edit Excel workbooks with formulas, data cleanup, and formatting.',
+            tags: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/xlsx',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'content-strategy',
+            description: 'Plan topic clusters, content priorities, and an editorial calendar around audience needs and search intent.',
+            tags: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'last30days',
+            description: 'Review recent web sources and community discussions to track a topic over the past month.',
+            tags: ['GitHub', 'Agent Skills', 'Research & Knowledge'],
+            url: 'https://github.com/mvanhorn/last30days-skill',
+            subcategory: 'github_skills/research'
+        },
+        {
             title: 'stop-slop',
             description: 'Spot formulaic transitions, stock phrases, and redundant summaries while keeping the author\'s voice.',
             tags: ['GitHub', 'Agent Skills', 'Editing'],
             url: 'https://github.com/hardikpandya/stop-slop',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/writing',
             isRecommended: true
         },
         {
@@ -21,7 +147,7 @@ const sitesData = {
             description: 'A Chinese-language toolkit for evaluating topics, analyzing popular content, and improving titles and hooks.',
             tags: ['GitHub', 'Agent Skills', 'Topics & Hooks'],
             url: 'https://github.com/dontbesilent2025/dbskill',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/writing',
             isRecommended: true
         },
         {
@@ -29,28 +155,28 @@ const sitesData = {
             description: 'Combine research, citations, outlining, and section-by-section feedback for articles and case studies.',
             tags: ['GitHub', 'Agent Skills', 'Research & Writing'],
             url: 'https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'NotebookLM Skill',
             description: 'Use NotebookLM sources such as course notes, interviews, or transcripts to support writing. The repository is archived.',
             tags: ['GitHub', 'Agent Skills', 'Source-grounded Writing'],
             url: 'https://github.com/PleasePrompto/notebooklm-skill',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'khazix-skills',
             description: 'Organize research leads and AI news material for industry analysis and long-form writing.',
             tags: ['GitHub', 'Agent Skills', 'Deep Research'],
             url: 'https://github.com/KKKKhazix/khazix-skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'Punk-Skill',
             description: 'Create covers for Rednote, WeChat, and X, plus avatars. The repo is now Punk-Posters. Commercial use requires a license.',
             tags: ['GitHub', 'Agent Skills', 'Covers & Avatars'],
             url: 'https://github.com/adrianpunk/Punk-Posters',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/design',
             isRecommended: true
         },
         {
@@ -58,42 +184,42 @@ const sitesData = {
             description: 'Turn articles into Rednote carousels, paired WeChat covers, or animated Live Photo cards.',
             tags: ['GitHub', 'Agent Skills', 'Social Cards'],
             url: 'https://github.com/op7418/guizang-social-card-skill',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'baoyu-skills',
             description: 'Turn frameworks, processes, and comparisons into infographics, diagrams, or article illustrations.',
             tags: ['GitHub', 'Agent Skills', 'Infographics & Diagrams'],
             url: 'https://github.com/JimLiu/baoyu-skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'ian-xiaohei-illustrations',
             description: 'Turn ideas, processes, and metaphors in Chinese articles into landscape illustrations in the Xiaohei hand-drawn style.',
             tags: ['GitHub', 'Agent Skills', 'Hand-drawn Illustrations'],
             url: 'https://github.com/helloianneo/ian-xiaohei-illustrations',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'html-anything',
             description: 'Turn Markdown or notes into publishable HTML articles, cards, and posters. The original app is kept on the legacy branch.',
             tags: ['GitHub', 'Agent Skills', 'HTML Publishing'],
             url: 'https://github.com/nexu-io/openmotion/tree/legacy',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'anthropics/skills',
             description: 'Official Anthropic skill examples for document processing, design, and everyday workflows.',
             tags: ['GitHub', 'Agent Skills'],
             url: 'https://github.com/anthropics/skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/workflow'
         },
         {
             title: 'openai/plugins',
             description: 'Official Codex plugin examples showing how to package skills and supporting resources.',
             tags: ['GitHub', 'Agent Skills'],
             url: 'https://github.com/openai/plugins',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/workflow'
         },
         {
             title: 'openai/openai-cookbook',

@@ -1433,10 +1433,14 @@ function filterAiSearchSubcategory(subcategory) {
 // 过滤子分类
 function filterSubcategoryGeneric(sectionId, subcategory) {
     // 更新按钮状态
+    const activeButton = document.querySelector(`#${sectionId}-section .subcategory-btn[onclick*="${subcategory}')"]`);
     document.querySelectorAll(`#${sectionId}-section .subcategory-btn`).forEach(btn => {
-        btn.classList.remove('active');
+        const isActive = btn === activeButton;
+        btn.classList.toggle('active', isActive);
+        if (btn.hasAttribute('aria-pressed')) {
+            btn.setAttribute('aria-pressed', String(isActive));
+        }
     });
-    document.querySelector(`#${sectionId}-section .subcategory-btn[onclick*="${subcategory}')"]`).classList.add('active');
 
     // 过滤卡片
     const cards = document.querySelectorAll(`#${sectionId}-grid .site-card`);
@@ -1448,7 +1452,9 @@ function filterSubcategoryGeneric(sectionId, subcategory) {
     });
     
     cards.forEach(card => {
-        if (subcategory === 'all' || card.dataset.subcategory === subcategory) {
+        // A parent filter also includes its slash-delimited subcategories.
+        const cardCategory = card.dataset.subcategory || '';
+        if (subcategory === 'all' || cardCategory === subcategory || cardCategory.startsWith(`${subcategory}/`)) {
             card.style.display = 'flex';
             visibleCards++;
         } else {
