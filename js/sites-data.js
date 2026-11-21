@@ -7,6 +7,99 @@
 const sitesData = {
     github_repos: [
         {
+            title: 'stop-slop',
+            description: '找出空洞转折、模板句和过度总结，帮助作者删掉生硬表达，保留自己的语气。',
+            descriptionEn: 'Spot formulaic transitions, stock phrases, and redundant summaries while keeping the author\'s voice.',
+            tags: ['GitHub', 'Agent Skills', '编辑润色'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Editing'],
+            url: 'https://github.com/hardikpandya/stop-slop',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'dbskill',
+            description: '面向中文创作者的技能工具箱，可评估选题、拆解热门内容，并优化标题和开头。',
+            descriptionEn: 'A Chinese-language toolkit for evaluating topics, analyzing popular content, and improving titles and hooks.',
+            tags: ['GitHub', 'Agent Skills', '选题与开头'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Topics & Hooks'],
+            url: 'https://github.com/dontbesilent2025/dbskill',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'content-research-writer',
+            description: '把资料搜集、引用、提纲和逐段反馈串起来，适合写长文、案例分析和行业解读。',
+            descriptionEn: 'Combine research, citations, outlining, and section-by-section feedback for articles and case studies.',
+            tags: ['GitHub', 'Agent Skills', '调研写作'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Research & Writing'],
+            url: 'https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'NotebookLM Skill',
+            description: '围绕 NotebookLM 中的课程、访谈或会议资料做问答和写作。仓库已归档。',
+            descriptionEn: 'Use NotebookLM sources such as course notes, interviews, or transcripts to support writing. The repository is archived.',
+            tags: ['GitHub', 'Agent Skills', '知识库写作'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Source-grounded Writing'],
+            url: 'https://github.com/PleasePrompto/notebooklm-skill',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'khazix-skills',
+            description: '辅助整理研究线索和 AI 热点素材，适合准备行业分析与长文。',
+            descriptionEn: 'Organize research leads and AI news material for industry analysis and long-form writing.',
+            tags: ['GitHub', 'Agent Skills', '深度研究'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Deep Research'],
+            url: 'https://github.com/KKKKhazix/khazix-skills',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'Punk-Skill',
+            description: '为小红书、公众号和 X 生成封面，也支持头像创作。现为 Punk-Posters，商用需授权。',
+            descriptionEn: 'Create covers for Rednote, WeChat, and X, plus avatars. The repo is now Punk-Posters. Commercial use requires a license.',
+            tags: ['GitHub', 'Agent Skills', '封面与头像'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Covers & Avatars'],
+            url: 'https://github.com/adrianpunk/Punk-Posters',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'guizang-social-card-skill',
+            description: '把长文拆成小红书图文卡片，也可制作公众号成对封面和 Live Photo 动态卡。',
+            descriptionEn: 'Turn articles into Rednote carousels, paired WeChat covers, or animated Live Photo cards.',
+            tags: ['GitHub', 'Agent Skills', '社交卡片'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Social Cards'],
+            url: 'https://github.com/op7418/guizang-social-card-skill',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'baoyu-skills',
+            description: '把框架、流程和对比内容转换成信息图、结构图或文章配图。',
+            descriptionEn: 'Turn frameworks, processes, and comparisons into infographics, diagrams, or article illustrations.',
+            tags: ['GitHub', 'Agent Skills', '信息图与结构图'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Infographics & Diagrams'],
+            url: 'https://github.com/JimLiu/baoyu-skills',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'ian-xiaohei-illustrations',
+            description: '把中文文章里的判断、流程或隐喻变成「小黑」风格的横版手绘解释图。',
+            descriptionEn: 'Turn ideas, processes, and metaphors in Chinese articles into landscape illustrations in the Xiaohei hand-drawn style.',
+            tags: ['GitHub', 'Agent Skills', '手绘正文配图'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Hand-drawn Illustrations'],
+            url: 'https://github.com/helloianneo/ian-xiaohei-illustrations',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'html-anything',
+            description: '将 Markdown 或笔记做成可发布的 HTML 文章、卡片或海报。原版保留在 legacy 分支。',
+            descriptionEn: 'Turn Markdown or notes into publishable HTML articles, cards, and posters. The original app is kept on the legacy branch.',
+            tags: ['GitHub', 'Agent Skills', 'HTML 排版发布'],
+            tagsEn: ['GitHub', 'Agent Skills', 'HTML Publishing'],
+            url: 'https://github.com/nexu-io/openmotion/tree/legacy',
+            subcategory: 'github_skills'
+        },
+        {
             title: 'anthropics/skills',
             description: 'Anthropic 官方 Skills 示例，涵盖文档处理、设计与日常工作流。',
             descriptionEn: 'Official Anthropic skill examples for document processing, design, and everyday workflows.',

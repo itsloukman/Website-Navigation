@@ -9,6 +9,79 @@
 const sitesData = {
     github_repos: [
         {
+            title: 'stop-slop',
+            description: 'Spot formulaic transitions, stock phrases, and redundant summaries while keeping the author\'s voice.',
+            tags: ['GitHub', 'Agent Skills', 'Editing'],
+            url: 'https://github.com/hardikpandya/stop-slop',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'dbskill',
+            description: 'A Chinese-language toolkit for evaluating topics, analyzing popular content, and improving titles and hooks.',
+            tags: ['GitHub', 'Agent Skills', 'Topics & Hooks'],
+            url: 'https://github.com/dontbesilent2025/dbskill',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'content-research-writer',
+            description: 'Combine research, citations, outlining, and section-by-section feedback for articles and case studies.',
+            tags: ['GitHub', 'Agent Skills', 'Research & Writing'],
+            url: 'https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'NotebookLM Skill',
+            description: 'Use NotebookLM sources such as course notes, interviews, or transcripts to support writing. The repository is archived.',
+            tags: ['GitHub', 'Agent Skills', 'Source-grounded Writing'],
+            url: 'https://github.com/PleasePrompto/notebooklm-skill',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'khazix-skills',
+            description: 'Organize research leads and AI news material for industry analysis and long-form writing.',
+            tags: ['GitHub', 'Agent Skills', 'Deep Research'],
+            url: 'https://github.com/KKKKhazix/khazix-skills',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'Punk-Skill',
+            description: 'Create covers for Rednote, WeChat, and X, plus avatars. The repo is now Punk-Posters. Commercial use requires a license.',
+            tags: ['GitHub', 'Agent Skills', 'Covers & Avatars'],
+            url: 'https://github.com/adrianpunk/Punk-Posters',
+            subcategory: 'github_skills',
+            isRecommended: true
+        },
+        {
+            title: 'guizang-social-card-skill',
+            description: 'Turn articles into Rednote carousels, paired WeChat covers, or animated Live Photo cards.',
+            tags: ['GitHub', 'Agent Skills', 'Social Cards'],
+            url: 'https://github.com/op7418/guizang-social-card-skill',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'baoyu-skills',
+            description: 'Turn frameworks, processes, and comparisons into infographics, diagrams, or article illustrations.',
+            tags: ['GitHub', 'Agent Skills', 'Infographics & Diagrams'],
+            url: 'https://github.com/JimLiu/baoyu-skills',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'ian-xiaohei-illustrations',
+            description: 'Turn ideas, processes, and metaphors in Chinese articles into landscape illustrations in the Xiaohei hand-drawn style.',
+            tags: ['GitHub', 'Agent Skills', 'Hand-drawn Illustrations'],
+            url: 'https://github.com/helloianneo/ian-xiaohei-illustrations',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'html-anything',
+            description: 'Turn Markdown or notes into publishable HTML articles, cards, and posters. The original app is kept on the legacy branch.',
+            tags: ['GitHub', 'Agent Skills', 'HTML Publishing'],
+            url: 'https://github.com/nexu-io/openmotion/tree/legacy',
+            subcategory: 'github_skills'
+        },
+        {
             title: 'anthropics/skills',
             description: 'Official Anthropic skill examples for document processing, design, and everyday workflows.',
             tags: ['GitHub', 'Agent Skills'],
