@@ -1380,21 +1380,6 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'GMX Mail',
-            description: '免费电子邮件服务，提供大容量存储和多账户管理',
-            tags: ['电子邮件', '免费邮箱', '账号资源'],
-            url: 'https://www.gmx.com/',
-            subcategory: 'account'
-        },
-        {
-            title: 'Proton Mail',
-            description: '注重隐私安全的邮箱服务，支持端到端加密与跨设备使用',
-            tags: ['隐私邮箱', '端到端加密', '账号资源'],
-            url: 'https://proton.me/mail',
-            subcategory: 'account',
-            needsMagic: true
-        },
-        {
             title: 'Coursera',
             description: '在线学习平台，提供来自顶尖大学和公司的电子商务和数字营销课程',
             tags: ['在线教育', '数字营销', '电商课程'],
@@ -1636,14 +1621,6 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: '百小应',
-            description: '百度知识增强的AI助手，拥有及时更新的互联网信息',
-            tags: ['百度搜索', '实时信息', '知识问答'],
-            url: 'https://info.baidu.com/',
-            subcategory: 'general_assistant',
-            needsMagic: false
-        },
-        {
             title: '天工AI',
             description: '昆仑万维推出的中文大语言模型，具有较强的指令理解能力',
             tags: ['中文AI', '指令理解', '国产模型'],
@@ -1651,55 +1628,7 @@ const sitesData = {
             subcategory: 'general_assistant',
             needsMagic: false
         },
-        {
-            title: 'Bing新必应',
-            description: '微软搜索引擎结合AI能力的对话式搜索体验',
-            tags: ['AI搜索', '网络信息', '微软AI'],
-            url: 'https://www.bing.com/new',
-            subcategory: 'general_assistant',
-            needsMagic: true
-        },
-        {
-            title: '商量SenseChat',
-            description: '商汤科技推出的AI助手，具有多轮对话和知识推理能力',
-            tags: ['商汤AI', '国产模型', '多轮对话'],
-            url: 'https://chat.sensetime.com/',
-            subcategory: 'general_assistant',
-            needsMagic: false
-        },
-        {
-            title: '小悟空',
-            description: '奇点智源推出的AI助手，拥有良好的中文理解和创作能力',
-            tags: ['中文AI', '知识问答', '奇点智源'],
-            url: 'https://openxlab.org.cn/apps/detail/singularity-ai/wukong',
-            subcategory: 'general_assistant',
-            needsMagic: false
-        },
         // 游戏与娱乐AI
-        {
-            title: '逗逗',
-            description: '专注于娱乐互动的AI助手，支持多种趣味对话场景',
-            tags: ['娱乐聊天', '休闲互动', '趣味对话'],
-            url: 'https://doudou.ai/',
-            subcategory: 'entertainment_ai',
-            needsMagic: false
-        },
-        {
-            title: 'Museland',
-            description: '专注于音乐和娱乐的AI互动平台，提供创意音乐体验',
-            tags: ['音乐互动', 'AI创意', '娱乐体验'],
-            url: 'https://www.museland.com/',
-            subcategory: 'entertainment_ai',
-            needsMagic: true
-        },
-        {
-            title: 'Me.bot',
-            description: '创建个性化AI分身的平台，可以基于自己的风格定制AI',
-            tags: ['AI分身', '个性定制', '形象复制'],
-            url: 'https://me.bot/',
-            subcategory: 'role_play',
-            needsMagic: true
-        },
         {
             title: '通义星尘',
             description: '阿里推出的虚拟数字人助手，提供情感化的对话体验',
@@ -1735,28 +1664,12 @@ const sitesData = {
             needsMagic: false
         },
         {
-            title: 'Meta AI助手',
+            title: 'Muse',
             description: 'Meta推出的多模态AI，支持图像、语音和文本的综合理解',
             tags: ['Meta AI', '多模态', '社交平台'],
             url: 'https://ai.meta.com/',
             subcategory: 'multimodal_ai',
             needsMagic: true
-        },
-        {
-            title: 'DALL-E',
-            description: 'OpenAI开发的AI图像生成系统，可根据文本描述创建图像',
-            tags: ['图像生成', 'AI艺术', '创意工具'],
-            url: 'https://openai.com/dall-e-3',
-            subcategory: 'multimodal_ai',
-            needsMagic: true
-        },
-        {
-            title: '稀饭AI',
-            description: '专注于中文场景的AI对话助手，支持文生图、图生图等多种创作模式',
-            tags: ['AI创作', '图文结合', '中文优化'],
-            url: 'https://xfan.ai/',
-            subcategory: 'multimodal_ai',
-            needsMagic: false
         },
         {
             title: 'Stable Diffusion',
@@ -1842,25 +1755,6 @@ const sitesData = {
         },
         
         // 国际化AI助手
-        {
-            title: 'Cici',
-            description: '豆包国际版，面向国际用户的中国AI技术展示',
-            tags: ['国际版', '中国技术', '多语言'],
-            title: '百川大模型',
-            description: '提供多语言支持的中国大模型，面向国际市场',
-            tags: ['多语言', '国际化', '中国AI'],
-            url: 'https://www.baichuan-ai.com/',
-            subcategory: 'international_ai',
-            needsMagic: false
-        },
-        {
-            title: 'Langchain AI',
-            description: '开发者工具框架，用于构建基于大型语言模型的国际化应用程序',
-            tags: ['开发框架', 'LLM应用', '国际标准'],
-            url: 'https://www.langchain.com/',
-            subcategory: 'international_ai',
-            needsMagic: true
-        },
         {
             title: 'Writesonic',
             description: '面向营销内容创作的AI助手，提供多种语言支持',

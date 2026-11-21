@@ -1173,21 +1173,6 @@ const sitesData = {
             needsMagic: true
         },
         {
-            title: 'GMX Mail',
-            description: 'Free email service with large storage and multi-account management',
-            tags: ['Email', 'Free Mailbox', 'Account Resources'],
-            url: 'https://www.gmx.com/',
-            subcategory: 'account'
-        },
-        {
-            title: 'Proton Mail',
-            description: 'Privacy-first email service with end-to-end encryption and secure multi-device access',
-            tags: ['Privacy Email', 'End-to-End Encryption', 'Account Resources'],
-            url: 'https://proton.me/mail',
-            subcategory: 'account',
-            needsMagic: true
-        },
-        {
             title: 'Coursera',
             description: 'Online learning platform offering e-commerce and digital marketing courses from top universities',
             tags: ['Online Education', 'Digital Marketing', 'E-Commerce Courses'],
@@ -1365,14 +1350,6 @@ const sitesData = {
     // AI图像
     ai_image: [
         // 通用AI图片生成
-        {
-            title: 'DALL·E 3',
-            description: 'OpenAI\'s advanced AI image generation system, supporting the conversion of complex text descriptions into precise images',
-            tags: ['OpenAI', 'text-to-image', 'high-quality images'],
-            url: 'https://openai.com/dall-e-3',
-            subcategory: 'general_image',
-            needsMagic: true
-        },
         {
             title: 'Stable Diffusion',
             description: 'An open - source text - to - image AI model that supports local deployment and custom fine - tuning',
@@ -1822,7 +1799,7 @@ const sitesData = {
 
         // Multimodal and Multi-model Platforms
         {
-            title: 'Meta AI',
+            title: 'Muse',
             description: 'Meta assistant with multimodal interactions across text and images',
             tags: ['Meta AI', 'multimodal', 'ecosystem'],
             url: 'https://www.meta.ai/',
