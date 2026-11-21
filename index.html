@@ -766,10 +766,18 @@
                     <h2 id="github-repos-heading"><i class="bi bi-github"></i> GitHub 开源精选</h2>
                 </div>
                 <div class="subcategory-nav">
-                    <button type="button" class="subcategory-btn active" onclick="filterSubcategoryGeneric('github-repos', 'all')">全部</button>
-                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">热门 Skills</button>
-                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">案例库</button>
+                    <button type="button" class="subcategory-btn active" aria-pressed="true" onclick="filterSubcategoryGeneric('github-repos', 'all')">全部</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">热门 Skills</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/workflow')">通用工作流</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/development')">开发与测试</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/automation')">网页自动化</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/writing')">写作与营销</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/research')">研究与知识</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/design')">设计与视频</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_skills/office')">办公与文档</button>
+                    <button type="button" class="subcategory-btn" aria-pressed="false" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">案例库</button>
                 </div>
+                <p class="small text-muted mb-3">热门条目参考 <a href="https://www.skills.sh/" target="_blank" rel="noopener noreferrer">Skills.sh</a> 累计安装量（2026-11-21）。</p>
                 <div id="github-repos-grid" class="site-grid"></div>
             </section>
 
@@ -839,9 +847,9 @@
     </div>
 
     <!-- JavaScript依赖 -->
-    <script src="js/sites-data.js?v=creator-skills-20261121"></script>
+    <script src="js/sites-data.js?v=skill-categories-20261121"></script>
     <script src="js/language.js"></script>
-    <script src="js/scripts.js?v=github-open-source"></script>
+    <script src="js/scripts.js?v=skill-categories-20261121"></script>
 
     <!-- 初始化语言 -->
     <script>

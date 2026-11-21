@@ -7,13 +7,175 @@
 const sitesData = {
     github_repos: [
         {
+            title: 'find-skills',
+            description: '从技能目录按任务搜索可安装的 Skills，适合给 Agent 补充新能力。',
+            descriptionEn: 'Find installable agent skills by task or capability.',
+            tags: ['GitHub', 'Agent Skills', '通用工作流'],
+            tagsEn: ['GitHub', 'Agent Skills', 'General Workflows'],
+            url: 'https://github.com/vercel-labs/skills/tree/main/skills/find-skills',
+            subcategory: 'github_skills/workflow'
+        },
+        {
+            title: 'agent-browser',
+            description: '让 Agent 打开网页、读取页面结构，并执行点击、输入和截图等操作。',
+            descriptionEn: 'Open pages, inspect their accessibility structure, and interact with browser controls.',
+            tags: ['GitHub', 'Agent Skills', '网页自动化'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Web Automation'],
+            url: 'https://github.com/vercel-labs/agent-browser',
+            subcategory: 'github_skills/automation'
+        },
+        {
+            title: 'hyperframes',
+            description: '把 HTML 动画和时间线渲染成视频，适合制作解说、片头和产品演示。',
+            descriptionEn: 'Render HTML animations and timelines into videos for explainers, intros, and demos.',
+            tags: ['GitHub', 'Agent Skills', '设计与视频'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/heygen-com/hyperframes/tree/main/skills/hyperframes',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'grill-me',
+            description: '通过连续追问澄清方案中的假设、取舍和待定事项，适合实施前评审。',
+            descriptionEn: 'Pressure-test a plan through follow-up questions about assumptions, tradeoffs, and open decisions.',
+            tags: ['GitHub', 'Agent Skills', '通用工作流'],
+            tagsEn: ['GitHub', 'Agent Skills', 'General Workflows'],
+            url: 'https://github.com/mattpocock/skills',
+            subcategory: 'github_skills/workflow'
+        },
+        {
+            title: 'design-mobile-apps',
+            description: '用 Sleek 设计移动端页面，再落实为 React Native 或 HTML 界面。',
+            descriptionEn: 'Design mobile screens in Sleek and implement them in React Native or HTML.',
+            tags: ['GitHub', 'Agent Skills', '设计与视频'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/designed-by-ai/skills/tree/main/skills/design-mobile-apps',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'frontend-design',
+            description: '指导前端界面的视觉方向、排版和交互细节，适合新页面和现有界面改版。',
+            descriptionEn: 'Guide visual direction, typography, and interaction details for new or existing frontends.',
+            tags: ['GitHub', 'Agent Skills', '设计与视频'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Design & Video'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/frontend-design',
+            subcategory: 'github_skills/design'
+        },
+        {
+            title: 'vercel-react-best-practices',
+            description: 'Vercel 的 React 和 Next.js 性能指南，涵盖数据获取、打包体积和重复渲染。',
+            descriptionEn: 'Vercel guidance for React and Next.js performance, covering data fetching, bundles, and re-renders.',
+            tags: ['GitHub', 'Agent Skills', '开发与测试'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'paper-context-resolver',
+            description: '当复现说明缺失时，从原论文核对数据集、预处理和评估设置。',
+            descriptionEn: 'Verify missing reproduction details such as dataset splits and evaluation settings against the original paper.',
+            tags: ['GitHub', 'Agent Skills', '研究与知识'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Research & Knowledge'],
+            url: 'https://github.com/lllllllama/RigorPilot-Skills/tree/main/skills/paper-context-resolver',
+            subcategory: 'github_skills/research'
+        },
+        {
+            title: 'lark-doc',
+            description: '通过飞书 CLI 读取、创建和编辑云文档与知识库页面。',
+            descriptionEn: 'Read, create, and update Feishu cloud documents and wiki pages with the Lark CLI.',
+            tags: ['GitHub', 'Agent Skills', '办公与文档'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/larksuite/cli/tree/main/skills/lark-doc',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'supabase-postgres-best-practices',
+            description: '用 Supabase 的 Postgres 指南检查索引、查询、表结构和访问策略。',
+            descriptionEn: 'Review PostgreSQL indexes, queries, schemas, and access policies with Supabase guidance.',
+            tags: ['GitHub', 'Agent Skills', '开发与测试'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/supabase/agent-skills/tree/main/skills/supabase-postgres-best-practices',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'systematic-debugging',
+            description: '按复现、定位根因、验证假设的顺序排查故障与测试失败。',
+            descriptionEn: 'Reproduce failures, trace their root cause, and test hypotheses before making a fix.',
+            tags: ['GitHub', 'Agent Skills', '开发与测试'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Development & Testing'],
+            url: 'https://github.com/obra/superpowers/tree/main/skills/systematic-debugging',
+            subcategory: 'github_skills/development'
+        },
+        {
+            title: 'copywriting',
+            description: '根据受众和转化目标起草或修改首页、落地页和定价页文案。',
+            descriptionEn: 'Draft or revise homepage, landing-page, and pricing copy for a specific audience and conversion goal.',
+            tags: ['GitHub', 'Agent Skills', '写作与营销'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/copywriting',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'seo-audit',
+            description: '检查网站索引、页面结构和技术 SEO，定位可能影响搜索可见性的问题。',
+            descriptionEn: 'Check indexing, page structure, and technical SEO for issues affecting search visibility.',
+            tags: ['GitHub', 'Agent Skills', '写作与营销'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/seo-audit',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'pdf',
+            description: '提取 PDF 文字与表格，处理扫描件，也支持合并、拆分和创建 PDF。',
+            descriptionEn: 'Extract text and tables, process scans, and create, merge, or split PDF files.',
+            tags: ['GitHub', 'Agent Skills', '办公与文档'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/pdf',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'webapp-testing',
+            description: '用 Playwright 检查本地网页交互、捕获截图，并查看浏览器日志。',
+            descriptionEn: 'Use Playwright to test local web interactions, capture screenshots, and inspect browser logs.',
+            tags: ['GitHub', 'Agent Skills', '网页自动化'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Web Automation'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/webapp-testing',
+            subcategory: 'github_skills/automation'
+        },
+        {
+            title: 'xlsx',
+            description: '创建或修改 Excel 表格，处理公式、数据清理和格式。',
+            descriptionEn: 'Create or edit Excel workbooks with formulas, data cleanup, and formatting.',
+            tags: ['GitHub', 'Agent Skills', '办公与文档'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Office & Documents'],
+            url: 'https://github.com/anthropics/skills/tree/main/skills/xlsx',
+            subcategory: 'github_skills/office'
+        },
+        {
+            title: 'content-strategy',
+            description: '按受众需求和搜索意图规划选题集群、内容优先级与发布日历。',
+            descriptionEn: 'Plan topic clusters, content priorities, and an editorial calendar around audience needs and search intent.',
+            tags: ['GitHub', 'Agent Skills', '写作与营销'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Writing & Marketing'],
+            url: 'https://github.com/coreyhaines31/marketingskills/tree/main/skills/content-strategy',
+            subcategory: 'github_skills/writing'
+        },
+        {
+            title: 'last30days',
+            description: '从近期网页和社区讨论中汇总一个主题的进展，适合追踪热点。',
+            descriptionEn: 'Review recent web sources and community discussions to track a topic over the past month.',
+            tags: ['GitHub', 'Agent Skills', '研究与知识'],
+            tagsEn: ['GitHub', 'Agent Skills', 'Research & Knowledge'],
+            url: 'https://github.com/mvanhorn/last30days-skill',
+            subcategory: 'github_skills/research'
+        },
+        {
             title: 'stop-slop',
             description: '找出空洞转折、模板句和过度总结，帮助作者删掉生硬表达，保留自己的语气。',
             descriptionEn: 'Spot formulaic transitions, stock phrases, and redundant summaries while keeping the author\'s voice.',
             tags: ['GitHub', 'Agent Skills', '编辑润色'],
             tagsEn: ['GitHub', 'Agent Skills', 'Editing'],
             url: 'https://github.com/hardikpandya/stop-slop',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/writing',
             isRecommended: true
         },
         {
@@ -23,7 +185,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '选题与开头'],
             tagsEn: ['GitHub', 'Agent Skills', 'Topics & Hooks'],
             url: 'https://github.com/dontbesilent2025/dbskill',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/writing',
             isRecommended: true
         },
         {
@@ -33,7 +195,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '调研写作'],
             tagsEn: ['GitHub', 'Agent Skills', 'Research & Writing'],
             url: 'https://github.com/ComposioHQ/awesome-claude-skills/tree/master/content-research-writer',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'NotebookLM Skill',
@@ -42,7 +204,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '知识库写作'],
             tagsEn: ['GitHub', 'Agent Skills', 'Source-grounded Writing'],
             url: 'https://github.com/PleasePrompto/notebooklm-skill',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'khazix-skills',
@@ -51,7 +213,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '深度研究'],
             tagsEn: ['GitHub', 'Agent Skills', 'Deep Research'],
             url: 'https://github.com/KKKKhazix/khazix-skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/research'
         },
         {
             title: 'Punk-Skill',
@@ -60,7 +222,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '封面与头像'],
             tagsEn: ['GitHub', 'Agent Skills', 'Covers & Avatars'],
             url: 'https://github.com/adrianpunk/Punk-Posters',
-            subcategory: 'github_skills',
+            subcategory: 'github_skills/design',
             isRecommended: true
         },
         {
@@ -70,7 +232,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '社交卡片'],
             tagsEn: ['GitHub', 'Agent Skills', 'Social Cards'],
             url: 'https://github.com/op7418/guizang-social-card-skill',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'baoyu-skills',
@@ -79,7 +241,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '信息图与结构图'],
             tagsEn: ['GitHub', 'Agent Skills', 'Infographics & Diagrams'],
             url: 'https://github.com/JimLiu/baoyu-skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'ian-xiaohei-illustrations',
@@ -88,7 +250,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', '手绘正文配图'],
             tagsEn: ['GitHub', 'Agent Skills', 'Hand-drawn Illustrations'],
             url: 'https://github.com/helloianneo/ian-xiaohei-illustrations',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'html-anything',
@@ -97,7 +259,7 @@ const sitesData = {
             tags: ['GitHub', 'Agent Skills', 'HTML 排版发布'],
             tagsEn: ['GitHub', 'Agent Skills', 'HTML Publishing'],
             url: 'https://github.com/nexu-io/openmotion/tree/legacy',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/design'
         },
         {
             title: 'anthropics/skills',
@@ -105,7 +267,7 @@ const sitesData = {
             descriptionEn: 'Official Anthropic skill examples for document processing, design, and everyday workflows.',
             tags: ['GitHub', 'Agent Skills'],
             url: 'https://github.com/anthropics/skills',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/workflow'
         },
         {
             title: 'openai/plugins',
@@ -113,7 +275,7 @@ const sitesData = {
             descriptionEn: 'Official Codex plugin examples showing how to package skills and supporting resources.',
             tags: ['GitHub', 'Agent Skills'],
             url: 'https://github.com/openai/plugins',
-            subcategory: 'github_skills'
+            subcategory: 'github_skills/workflow'
         },
         {
             title: 'openai/openai-cookbook',
