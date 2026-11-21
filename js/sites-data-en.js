@@ -7,6 +7,37 @@
 
 
 const sitesData = {
+    github_repos: [
+        {
+            title: 'anthropics/skills',
+            description: 'Official Anthropic skill examples for document processing, design, and everyday workflows.',
+            tags: ['GitHub', 'Agent Skills'],
+            url: 'https://github.com/anthropics/skills',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'openai/plugins',
+            description: 'Official Codex plugin examples showing how to package skills and supporting resources.',
+            tags: ['GitHub', 'Agent Skills'],
+            url: 'https://github.com/openai/plugins',
+            subcategory: 'github_skills'
+        },
+        {
+            title: 'openai/openai-cookbook',
+            description: 'OpenAI API code samples and practical guides with reusable implementations.',
+            tags: ['GitHub', 'Examples'],
+            url: 'https://github.com/openai/openai-cookbook',
+            subcategory: 'github_examples'
+        },
+        {
+            title: 'microsoft/generative-ai-for-beginners',
+            description: 'Microsoft\'s introductory generative AI course with hands-on exercises and sample applications.',
+            tags: ['GitHub', 'Examples'],
+            url: 'https://github.com/microsoft/generative-ai-for-beginners',
+            subcategory: 'github_examples'
+        }
+    ],
+
     // E-commerce Platforms
     ecommerce: [
         {

@@ -365,6 +365,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="#github_repos" class="nav-link" onclick="showCategory('github_repos'); return false;">
+                    <i class="bi bi-github"></i>
+                    GitHub 开源精选
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" onclick="showCategory('craft_apps')">
                     <i class="fa-solid fa-puzzle-piece sidebar-fa-icon" style="color:#17947F;"></i>
                     Craft 开源软件
@@ -752,6 +758,18 @@
                 </div>
             </div>
 
+            <section id="github-repos-section" class="category-section" aria-labelledby="github-repos-heading">
+                <div class="category-title">
+                    <h2 id="github-repos-heading"><i class="bi bi-github"></i> GitHub 开源精选</h2>
+                </div>
+                <div class="subcategory-nav">
+                    <button type="button" class="subcategory-btn active" onclick="filterSubcategoryGeneric('github-repos', 'all')">全部</button>
+                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">热门 Skills</button>
+                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">案例库</button>
+                </div>
+                <div id="github-repos-grid" class="site-grid"></div>
+            </section>
+
             <!-- Craft 开源创作软件 -->
             <div id="craft-apps-section" class="category-section">
                 <div class="category-title">
@@ -818,9 +836,9 @@
     </div>
 
     <!-- JavaScript依赖 -->
-    <script src="js/sites-data.js"></script>
+    <script src="js/sites-data.js?v=github-open-source"></script>
     <script src="js/language.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js?v=github-open-source"></script>
 
     <!-- 初始化语言 -->
     <script>
