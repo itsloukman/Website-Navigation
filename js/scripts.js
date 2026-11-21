@@ -2399,7 +2399,7 @@ function performSiteSearch(query) {
 function getCategoryDisplayName(categoryKey) {
     const isEnglish = getCurrentLanguage() === 'en';
     const categoryMap = {
-        'github_repos': isEnglish ? 'Popular GitHub Repositories' : 'GitHub 热门仓库',
+        'github_repos': isEnglish ? 'GitHub Open Source Picks' : 'GitHub 开源精选',
         'resources': isEnglish ? 'Resource Guides' : '资源导引',
         'tech_blog': isEnglish ? 'Technical Playbooks' : '技术实战',
         'ecommerce': isEnglish ? 'E-commerce' : '电商平台',
@@ -2496,7 +2496,7 @@ function getSeoLabel(key, isEnglish) {
     const map = {
         home: isEnglish ? 'Home' : '首页',
         search: isEnglish ? 'Search Results' : '搜索结果',
-        github_repos: isEnglish ? 'Popular GitHub Repositories' : 'GitHub 热门仓库',
+        github_repos: isEnglish ? 'GitHub Open Source Picks' : 'GitHub 开源精选',
         craft_apps: isEnglish ? 'Craft Open-Source Creative Apps' : 'Craft 开源创作软件',
         craft_ai: isEnglish ? 'AI & Generative Media' : 'AI 与生成式媒体',
         craft_design: isEnglish ? 'Graphics & Design' : '图形与设计',
@@ -2977,7 +2977,7 @@ function organizeFooterCategories() {
                     { id: 'website', icon: 'bi-globe', text: 'Site Builders', description: 'Landing pages / Storefronts / CMS', title: 'Website builder navigation, landing page, store and CMS resources', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI Coding', description: 'Code generation / IDE / Debugging', title: 'AI coding navigation, code generation, IDE and debugging tools', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
                     { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'Prompting', description: 'Prompt libraries / Templates / Workflows', title: 'Prompt engineering navigation, prompt libraries and workflow templates', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
-                    { id: 'github_repos', icon: 'bi-github', text: 'Popular GitHub Repositories', description: 'Agent Skills / Example Libraries', title: 'Popular GitHub Repositories', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
+                    { id: 'github_repos', icon: 'bi-github', text: 'GitHub Open Source Picks', description: 'Agent Skills / Example Libraries', title: 'GitHub Open Source Picks', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft Apps', description: '20 free & open-source creative apps', title: 'Craft open-source creative apps directory, 20 free tools with official downloads', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
             }
@@ -3015,7 +3015,7 @@ function organizeFooterCategories() {
                     { id: 'website', icon: 'bi-globe', text: '建站工具', description: '落地页 / 商店 / CMS', title: '建站工具导航，落地页、商店与 CMS 资源', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI编程', description: '代码生成 / IDE / 调试', title: 'AI编程导航，代码生成、IDE 与调试工具', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
                     { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'AI提示词', description: '提示词库 / 模板 / 工作流', title: 'AI提示词导航，提示词库、模板与工作流资源', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
-                    { id: 'github_repos', icon: 'bi-github', text: 'GitHub 热门仓库', description: '热门 Skills / 案例库', title: 'GitHub 热门仓库', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
+                    { id: 'github_repos', icon: 'bi-github', text: 'GitHub 开源精选', description: '热门 Skills / 案例库', title: 'GitHub 开源精选', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft 开源软件', description: '20 款免费开源创作工具', title: 'Craft 开源创作软件目录，20 款免费工具与官方下载地址', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
             }
