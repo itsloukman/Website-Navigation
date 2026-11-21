@@ -347,6 +347,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="#github_repos" class="nav-link" onclick="showCategory('github_repos'); return false;">
+                    <i class="bi bi-github"></i>
+                    Popular GitHub Repositories
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" onclick="showCategory('craft_apps')">
                     <i class="bi bi-puzzle"></i>
                     Craft Apps
@@ -694,6 +700,18 @@
                     <!-- AI search site cards will be dynamically added via JavaScript -->
                 </div>
             </div>
+
+            <section id="github-repos-section" class="category-section" aria-labelledby="github-repos-heading">
+                <div class="category-title">
+                    <h2 id="github-repos-heading"><i class="bi bi-github"></i> Popular GitHub Repositories</h2>
+                </div>
+                <div class="subcategory-nav">
+                    <button type="button" class="subcategory-btn active" onclick="filterSubcategoryGeneric('github-repos', 'all')">All</button>
+                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_skills')">Agent Skills</button>
+                    <button type="button" class="subcategory-btn" onclick="filterSubcategoryGeneric('github-repos', 'github_examples')">Example Libraries</button>
+                </div>
+                <div id="github-repos-grid" class="site-grid"></div>
+            </section>
 
             <!-- Craft open-source creative apps -->
             <div id="craft-apps-section" class="category-section">
