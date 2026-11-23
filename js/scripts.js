@@ -558,6 +558,7 @@ function loadSites() {
         initializeCardVisibility('ai-search-grid');
     }
     
+    loadSitesByCategory(sitesData.video_downloads, 'video-downloads-grid');
     loadSitesByCategory(sitesData.github_repos, 'github-repos-grid');
     if (document.getElementById('github-repos-grid')) {
         filterSubcategoryGeneric('github-repos', 'all');
@@ -1713,6 +1714,8 @@ function showCategory(category) {
         console.log('显示AI搜索子分类:', category);
         document.getElementById('ai-search-section').style.display = 'block';
         filterAiSearchSubcategory(category);
+    } else if (category === 'video_downloads') {
+        document.getElementById('video-downloads-section').style.display = 'block';
     } else if (category === 'github_repos') {
         document.getElementById('github-repos-section').style.display = 'block';
         filterSubcategoryGeneric('github-repos', 'all');
@@ -2320,7 +2323,7 @@ function performSiteSearch(query) {
     const categories = [
         'resources', 'tech_blog', 'ecommerce', 'social', 'website', 'ai_chat', 'ai_writing', 'ai_image',
         'ecommerce_zone', 'ai_video', 'ai_audio', 'ai_design', 'ai_coding', 'ai_prompts', 'ai_search',
-        'craft_apps', 'github_repos'
+        'craft_apps', 'github_repos', 'video_downloads'
     ];
     
     // 对每个分类进行搜索
@@ -2405,6 +2408,7 @@ function performSiteSearch(query) {
 function getCategoryDisplayName(categoryKey) {
     const isEnglish = getCurrentLanguage() === 'en';
     const categoryMap = {
+        'video_downloads': isEnglish ? 'Video Downloads' : '视频下载',
         'github_repos': isEnglish ? 'GitHub Open Source Picks' : 'GitHub 开源精选',
         'resources': isEnglish ? 'Resource Guides' : '资源导引',
         'tech_blog': isEnglish ? 'Technical Playbooks' : '技术实战',
@@ -2480,6 +2484,7 @@ function createSiteCardWithCategory(site, categoryName) {
 
 const SEO_CATEGORY_GROUPS = {
     github_repos: [],
+    video_downloads: [],
     resources: [],
     'tech-blog': ['tech_official_docs', 'tech_tutorials', 'tech_workflows', 'tech_deploy_ops', 'tech_case_studies'],
     ecommerce: ['amazon', 'aliexpress', 'ebay', 'lazada', 'shopee', 'tiktok-shop', 'temu', 'mercado-libre', 'shopify', 'other-ecommerce'],
@@ -2502,6 +2507,7 @@ function getSeoLabel(key, isEnglish) {
     const map = {
         home: isEnglish ? 'Home' : '首页',
         search: isEnglish ? 'Search Results' : '搜索结果',
+        video_downloads: isEnglish ? 'Video Downloads' : '视频下载',
         github_repos: isEnglish ? 'GitHub Open Source Picks' : 'GitHub 开源精选',
         craft_apps: isEnglish ? 'Craft Open-Source Creative Apps' : 'Craft 开源创作软件',
         craft_ai: isEnglish ? 'AI & Generative Media' : 'AI 与生成式媒体',
@@ -2641,6 +2647,7 @@ function resolveCategoryNavigationTarget(category) {
         ai_coding: 'ai-coding-section',
         ai_prompts: 'ai-prompts-section',
         ai_search: 'ai-search-section',
+        video_downloads: 'video-downloads-section',
         github_repos: 'github-repos-section',
         craft_apps: 'craft-apps-section'
     };
@@ -2734,7 +2741,7 @@ function updateStructuredData(category = 'home') {
         'resources', 'tech_blog',
         'ecommerce', 'social', 'website', 'ai_chat', 'ai_writing',
         'ai_image', 'ecommerce_zone', 'ai_video', 'ai_audio', 'ai_design', 'ai_coding',
-        'ai_prompts', 'ai_search', 'craft_apps'
+        'ai_prompts', 'ai_search', 'craft_apps', 'video_downloads'
     ];
 
     const categorySites = context.topLevel
@@ -2893,7 +2900,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 页面加载时初始化
     loadSites();
-    showCategory(window.location.hash === '#github_repos' ? 'github_repos' : 'home');
+    const initialCategory = window.location.hash.slice(1);
+    showCategory(['github_repos', 'video_downloads'].includes(initialCategory) ? initialCategory : 'home');
     
     // 初始化所有二级分类导航的平衡布局
     balanceAllSubcategoryNavs();
@@ -2983,6 +2991,7 @@ function organizeFooterCategories() {
                     { id: 'website', icon: 'bi-globe', text: 'Site Builders', description: 'Landing pages / Storefronts / CMS', title: 'Website builder navigation, landing page, store and CMS resources', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI Coding', description: 'Code generation / IDE / Debugging', title: 'AI coding navigation, code generation, IDE and debugging tools', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
                     { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'Prompting', description: 'Prompt libraries / Templates / Workflows', title: 'Prompt engineering navigation, prompt libraries and workflow templates', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
+                    { id: 'video_downloads', icon: 'bi-download', text: 'Video Downloads', description: 'WeChat Channels / Douyin / YouTube', title: 'Video Downloads', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'github_repos', icon: 'bi-github', text: 'GitHub Open Source Picks', description: 'Agent Skills / Example Libraries', title: 'GitHub Open Source Picks', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft Apps', description: '20 free & open-source creative apps', title: 'Craft open-source creative apps directory, 20 free tools with official downloads', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
@@ -3021,6 +3030,7 @@ function organizeFooterCategories() {
                     { id: 'website', icon: 'bi-globe', text: '建站工具', description: '落地页 / 商店 / CMS', title: '建站工具导航，落地页、商店与 CMS 资源', iconBg: 'rgba(118, 165, 255, 0.18)', iconColor: '#3e65d1' },
                     { id: 'ai_coding', icon: 'bi-code-slash', text: 'AI编程', description: '代码生成 / IDE / 调试', title: 'AI编程导航，代码生成、IDE 与调试工具', iconBg: 'rgba(108, 225, 224, 0.2)', iconColor: '#198b97' },
                     { id: 'ai_prompts', icon: 'bi-lightbulb', text: 'AI提示词', description: '提示词库 / 模板 / 工作流', title: 'AI提示词导航，提示词库、模板与工作流资源', iconBg: 'rgba(255, 215, 128, 0.22)', iconColor: '#b07a0f' },
+                    { id: 'video_downloads', icon: 'bi-download', text: '视频下载', description: '视频号 / 抖音 / YouTube', title: '视频下载', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'github_repos', icon: 'bi-github', text: 'GitHub 开源精选', description: '热门 Skills / 案例库', title: 'GitHub 开源精选', iconBg: 'rgba(108, 117, 125, 0.14)', iconColor: '#495057' },
                     { id: 'craft_apps', icon: 'bi-puzzle', text: 'Craft 开源软件', description: '20 款免费开源创作工具', title: 'Craft 开源创作软件目录，20 款免费工具与官方下载地址', iconBg: 'rgba(76, 201, 176, 0.18)', iconColor: '#17947f' }
                 ]
