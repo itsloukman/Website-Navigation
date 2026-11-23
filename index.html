@@ -243,6 +243,9 @@
                 <a href="#github_repos" title="跳转到 GitHub 开源精选" class="top-nav-link top-nav-special" onclick="showCategory('github_repos'); return false;">
                     <i class="bi bi-github" aria-hidden="true"></i> GitHub 开源精选
                 </a>
+                <a href="#video_downloads" class="top-nav-link" onclick="showCategory('video_downloads'); return false;">
+                    <i class="bi bi-download" aria-hidden="true"></i> 视频下载
+                </a>
                 <a href="https://virtualbrains.feishu.cn/wiki/SHUPwNzcbi3SkGkV3Vgcptb0nVb?from=from_copylink" target="_blank" rel="noopener noreferrer" title="打开飞书小众网址资源库" class="top-nav-link">
                     <i class="bi bi-collection"></i> 小众网址
                 </a>
@@ -365,6 +368,12 @@
                 <a class="nav-link" onclick="showCategory('ai_search')">
                     <i class="fa-solid fa-magnifying-glass sidebar-fa-icon" style="color:#5D9CEC;"></i>
                     AI 搜索
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#video_downloads" class="nav-link" onclick="showCategory('video_downloads'); return false;">
+                    <i class="bi bi-download" aria-hidden="true"></i>
+                    视频下载
                 </a>
             </li>
             <li class="nav-item">
@@ -761,6 +770,13 @@
                 </div>
             </div>
 
+            <section id="video-downloads-section" class="category-section" aria-labelledby="video-downloads-heading">
+                <div class="category-title">
+                    <h2 id="video-downloads-heading"><i class="bi bi-download" aria-hidden="true"></i> 视频下载</h2>
+                </div>
+                <div id="video-downloads-grid" class="site-grid"></div>
+            </section>
+
             <section id="github-repos-section" class="category-section" aria-labelledby="github-repos-heading">
                 <div class="category-title">
                     <h2 id="github-repos-heading"><i class="bi bi-github"></i> GitHub 开源精选</h2>
@@ -847,9 +863,9 @@
     </div>
 
     <!-- JavaScript依赖 -->
-    <script src="js/sites-data.js?v=skill-categories-20261121"></script>
+    <script src="js/sites-data.js?v=video-downloads-20261123"></script>
     <script src="js/language.js"></script>
-    <script src="js/scripts.js?v=skill-categories-20261121"></script>
+    <script src="js/scripts.js?v=video-downloads-20261123"></script>
 
     <!-- 初始化语言 -->
     <script>

@@ -7,6 +7,33 @@
 
 
 const sitesData = {
+    video_downloads: [
+        {
+            title: 'WeChat Channels Downloader',
+            description: 'Download videos from WeChat Channels. The project site links to documentation and installers.',
+            tags: ['WeChat', 'Channels', 'Desktop'],
+            url: 'https://ltaoo.github.io/wx_channels_download/'
+        },
+        {
+            title: 'Douyin / TikTok Downloader',
+            description: 'TikTokDownloader saves video and photo posts from Douyin and TikTok.',
+            tags: ['Douyin', 'TikTok', 'Short video'],
+            url: 'https://github.com/JoeanAmier/TikTokDownloader'
+        },
+        {
+            title: 'YouTube Downloader · yt-dlp',
+            description: 'Open-source command-line downloader for videos, audio, and subtitles from YouTube and other supported sites.',
+            tags: ['YouTube', 'Command line', 'Subtitles'],
+            url: 'https://github.com/yt-dlp/yt-dlp'
+        },
+        {
+            title: 'Bilibili Downloader · BBDown',
+            description: 'Open-source command-line downloader for Bilibili videos and multi-part uploads.',
+            tags: ['Bilibili', 'Command line'],
+            url: 'https://github.com/nilaoda/BBDown'
+        },
+    ],
+
     github_repos: [
         {
             title: 'find-skills',

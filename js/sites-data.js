@@ -5,6 +5,45 @@
  */
 
 const sitesData = {
+    video_downloads: [
+        {
+            title: '微信视频号下载器',
+            description: '视频号下载工具，项目页提供使用文档和各系统安装包。',
+            tags: ['微信', '视频号', '桌面工具'],
+            titleEn: 'WeChat Channels Downloader',
+            descriptionEn: 'Download videos from WeChat Channels. The project site links to documentation and installers.',
+            tagsEn: ['WeChat', 'Channels', 'Desktop'],
+            url: 'https://ltaoo.github.io/wx_channels_download/'
+        },
+        {
+            title: '抖音 / TikTok 下载器',
+            description: 'TikTokDownloader 支持下载抖音和 TikTok 视频及图文作品。',
+            tags: ['抖音', 'TikTok', '短视频'],
+            titleEn: 'Douyin / TikTok Downloader',
+            descriptionEn: 'TikTokDownloader saves video and photo posts from Douyin and TikTok.',
+            tagsEn: ['Douyin', 'TikTok', 'Short video'],
+            url: 'https://github.com/JoeanAmier/TikTokDownloader'
+        },
+        {
+            title: 'YouTube 下载器 · yt-dlp',
+            description: '开源命令行工具，支持下载 YouTube 及其他受支持平台的视频、音频和字幕。',
+            tags: ['YouTube', '命令行', '字幕'],
+            titleEn: 'YouTube Downloader · yt-dlp',
+            descriptionEn: 'Open-source command-line downloader for videos, audio, and subtitles from YouTube and other supported sites.',
+            tagsEn: ['YouTube', 'Command line', 'Subtitles'],
+            url: 'https://github.com/yt-dlp/yt-dlp'
+        },
+        {
+            title: '哔哩哔哩下载器 · BBDown',
+            description: '开源命令行下载工具，支持哔哩哔哩视频和分 P 下载。',
+            tags: ['哔哩哔哩', 'Bilibili', '命令行'],
+            titleEn: 'Bilibili Downloader · BBDown',
+            descriptionEn: 'Open-source command-line downloader for Bilibili videos and multi-part uploads.',
+            tagsEn: ['Bilibili', 'Command line'],
+            url: 'https://github.com/nilaoda/BBDown'
+        },
+    ],
+
     github_repos: [
         {
             title: 'find-skills',
