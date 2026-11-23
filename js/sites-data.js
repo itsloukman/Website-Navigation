@@ -3952,28 +3952,6 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'Futurepedia',
-            titleEn: 'Futurepedia',
-            description: '覆盖大量 AI 工具、自动化产品与行业场景的导航目录，适合做工具发现和竞品参考。',
-            descriptionEn: 'Large AI tools directory covering automation products and use cases for discovery and competitor research.',
-            tags: ['工具导航', '任务检索', '模型对比'],
-            tagsEn: ['Tool Discovery', 'Use Cases', 'Model Comparison'],
-            url: 'https://www.futurepedia.io/',
-            subcategory: 'resource_tool_navigation',
-            isRecommended: true
-        },
-        {
-            title: 'Future Tools',
-            titleEn: 'Future Tools',
-            description: 'Matt Wolfe 维护的 AI 工具数据库，2026 年仍持续更新，适合按类别浏览新工具并订阅 AI Briefing。',
-            descriptionEn: 'Matt Wolfe curated AI tools database that remains actively updated in 2026 for browsing launches by category and newsletter tracking.',
-            tags: ['新工具追踪', '分类浏览', 'AI Briefing'],
-            tagsEn: ['New Tools', 'Category Browse', 'AI Briefing'],
-            url: 'https://www.futuretools.io/',
-            subcategory: 'resource_tool_navigation',
-            isRecommended: true
-        },
-        {
             title: 'ModelScope 魔搭社区',
             titleEn: 'ModelScope',
             description: '国内头部开源模型社区，2026 年持续更新模型库、数据集、创空间与 MCP 广场，适合进入中文模型生态。',

@@ -3645,22 +3645,6 @@ const sitesData = {
             isRecommended: true
         },
         {
-            title: 'Futurepedia',
-            description: 'Large AI tools directory covering automation products and use cases for discovery and competitor research.',
-            tags: ['Tool Discovery', 'Use Cases', 'Model Comparison'],
-            url: 'https://www.futurepedia.io/',
-            subcategory: 'resource_tool_navigation',
-            isRecommended: true
-        },
-        {
-            title: 'Future Tools',
-            description: 'Matt Wolfe curated AI tools database that remains actively updated in 2026 for browsing launches by category and newsletter tracking.',
-            tags: ['New Tools', 'Category Browse', 'AI Briefing'],
-            url: 'https://www.futuretools.io/',
-            subcategory: 'resource_tool_navigation',
-            isRecommended: true
-        },
-        {
             title: 'ModelScope',
             description: 'Major open model community with active 2026 updates across models, datasets, studios, and MCP marketplace for the Chinese AI ecosystem.',
             tags: ['Open Models', 'Community', 'Chinese'],
