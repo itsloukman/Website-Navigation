@@ -4192,7 +4192,97 @@ const sitesData = {
             url: 'https://www.stateof.ai/',
             subcategory: 'resource_learning_news',
             isRecommended: true
-        }
+        },
+        {
+            title: 'TikHub',
+            description: '社媒数据 API，覆盖抖音、小红书、B 站和常见海外平台。',
+            tags: ['数据 API'],
+            titleEn: 'TikHub',
+            descriptionEn: 'Social media data APIs for Douyin, Rednote, Bilibili, and international platforms.',
+            tagsEn: ['Data API'],
+            url: 'https://tikhub.io/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'JustOneAPI',
+            description: '社媒与电商数据接口，适合同时做内容分析和选品。',
+            tags: ['数据 API'],
+            titleEn: 'JustOneAPI',
+            descriptionEn: 'Social and ecommerce data APIs for content analysis and product research.',
+            tagsEn: ['Data API'],
+            url: 'https://docs.justoneapi.com/zh/api/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'SocialDataX',
+            description: '面向中文社媒的数据服务，提供 HTTP API 与 MCP 接入。',
+            tags: ['API 与 MCP'],
+            titleEn: 'SocialDataX',
+            descriptionEn: 'HTTP API and MCP access for Chinese social media data.',
+            tagsEn: ['API and MCP'],
+            url: 'https://socialdatax.com/api-docs/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'ScrapeCreators',
+            description: '提供海外社媒的帖子、评论、账号资料与广告数据接口。',
+            tags: ['数据 API'],
+            titleEn: 'ScrapeCreators',
+            descriptionEn: 'APIs for posts, comments, profiles, and ad data across international platforms.',
+            tagsEn: ['Data API'],
+            url: 'https://scrapecreators.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'EnsembleData',
+            description: '提供 TikTok、Instagram、YouTube 等平台的社媒数据接口。',
+            tags: ['数据 API'],
+            titleEn: 'EnsembleData',
+            descriptionEn: 'Social media APIs for platforms such as TikTok, Instagram, and YouTube.',
+            tagsEn: ['Data API'],
+            url: 'https://ensembledata.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'Apify',
+            description: '社媒采集器目录，可通过网页或 API 使用现成工具。',
+            tags: ['工具目录'],
+            titleEn: 'Apify',
+            descriptionEn: 'A directory of social media data tools that run through the web interface or API.',
+            tagsEn: ['Tool Directory'],
+            url: 'https://apify.com/store/categories/social-media',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'Bright Data',
+            description: '提供社媒数据 API 和预采集数据集。',
+            tags: ['API 与数据集'],
+            titleEn: 'Bright Data',
+            descriptionEn: 'Social media data APIs and pre-collected datasets.',
+            tagsEn: ['API and Datasets'],
+            url: 'https://brightdata.com/products/web-scraper/social-media-scrape',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: '千瓜数据',
+            description: '小红书内容、达人与种草营销分析平台。',
+            tags: ['运营分析'],
+            titleEn: 'QianGua',
+            descriptionEn: 'Analytics for Rednote content, creators, and influencer marketing.',
+            tagsEn: ['Analytics'],
+            url: 'https://www.qian-gua.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: '飞瓜数据',
+            description: '面向短视频运营和选品的内容、达人及电商数据分析平台。',
+            tags: ['运营分析'],
+            titleEn: 'Feigua',
+            descriptionEn: 'Short-video, creator, and ecommerce analytics for content operations and product research.',
+            tagsEn: ['Analytics'],
+            url: 'https://www.feigua.cn/',
+            subcategory: 'resource_social_data'
+        },
     ],
     tech_blog: [
         {

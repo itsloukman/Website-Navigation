@@ -3819,7 +3819,70 @@ const sitesData = {
             url: 'https://www.stateof.ai/',
             subcategory: 'resource_learning_news',
             isRecommended: true
-        }
+        },
+        {
+            title: 'TikHub',
+            description: 'Social media data APIs for Douyin, Rednote, Bilibili, and international platforms.',
+            tags: ['Data API'],
+            url: 'https://tikhub.io/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'JustOneAPI',
+            description: 'Social and ecommerce data APIs for content analysis and product research.',
+            tags: ['Data API'],
+            url: 'https://docs.justoneapi.com/zh/api/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'SocialDataX',
+            description: 'HTTP API and MCP access for Chinese social media data.',
+            tags: ['API and MCP'],
+            url: 'https://socialdatax.com/api-docs/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'ScrapeCreators',
+            description: 'APIs for posts, comments, profiles, and ad data across international platforms.',
+            tags: ['Data API'],
+            url: 'https://scrapecreators.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'EnsembleData',
+            description: 'Social media APIs for platforms such as TikTok, Instagram, and YouTube.',
+            tags: ['Data API'],
+            url: 'https://ensembledata.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'Apify',
+            description: 'A directory of social media data tools that run through the web interface or API.',
+            tags: ['Tool Directory'],
+            url: 'https://apify.com/store/categories/social-media',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'Bright Data',
+            description: 'Social media data APIs and pre-collected datasets.',
+            tags: ['API and Datasets'],
+            url: 'https://brightdata.com/products/web-scraper/social-media-scrape',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'QianGua',
+            description: 'Analytics for Rednote content, creators, and influencer marketing.',
+            tags: ['Analytics'],
+            url: 'https://www.qian-gua.com/',
+            subcategory: 'resource_social_data'
+        },
+        {
+            title: 'Feigua',
+            description: 'Short-video, creator, and ecommerce analytics for content operations and product research.',
+            tags: ['Analytics'],
+            url: 'https://www.feigua.cn/',
+            subcategory: 'resource_social_data'
+        },
     ],
     tech_blog: [
         {
